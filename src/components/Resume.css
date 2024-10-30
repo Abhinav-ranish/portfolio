@@ -1,0 +1,43 @@
+/* src/components/Resume.css */
+
+#resume {
+    text-align: center;
+    background-color: #ffffff1d;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #resume h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  #resume p {
+    font-size: 1.2em;
+    color: #d6d4d4;
+  }
+  
+  iframe {
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  /* src/components/Resume.css */
+
+/* Other resume styles above */
+
+@media (max-width: 768px) {
+    #resume {
+      padding: 20px;
+    }
+  
+    iframe {
+      width: 100%;
+      height: auto;
+    }
+  }
+  

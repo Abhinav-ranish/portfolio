@@ -1,0 +1,51 @@
+/* src/components/Contact.css */
+
+#contact {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff1d;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  #contact p {
+    font-size: 1.2em;
+    color: #cfcfcf;
+  }
+  
+  .contact-buttons {
+    margin-top: 20px;
+  }
+  
+  .contact-buttons a {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  
+  /* src/components/Contact.css */
+
+/* Other contact styles above */
+
+@media (max-width: 768px) {
+    #contact {
+      padding: 20px;
+    }
+  
+    .contact-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .contact-buttons a {
+      margin: 10px 0;
+      width: 100%;
+    }
+  }
+  
