@@ -12,6 +12,12 @@ const GitHubSnippet = () => {
         title="GitHub Repos"
         allowTransparency="true"
       ></iframe>
+      <button 
+        onClick={() => window.open('https://github.com/abhinav-ranish', '_blank')}
+        className="github-button"
+      >
+        Link to my GitHub
+      </button>
     </section>
   );
 };
