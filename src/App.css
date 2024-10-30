@@ -177,7 +177,7 @@ footer {
 }
 
 /* Responsive layout */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .three-column-layout {
     flex-direction: column;
     padding: 10px;
@@ -189,5 +189,6 @@ footer {
 
   .nav-center h1 {
     font-size: 1.2em;
+    display: none;
   }
 }

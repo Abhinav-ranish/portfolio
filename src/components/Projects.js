@@ -36,6 +36,7 @@ const ProjectCard = ({ title, description, technologies, link }) => (
     <div className="project-info">
       <p>{description}</p>
       <p><strong>Technologies:</strong> {technologies.join(', ')}</p>
+      <a href={link} target="_blank" rel="noopener noreferrer">View Project</a>
     </div>
   </div>
 );
