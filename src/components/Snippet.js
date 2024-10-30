@@ -7,17 +7,16 @@ const GitHubSnippet = () => {
   return (
     <section className="github-snippet">
       <h2>My GitHub Repos</h2>
+      <br></br>
+      <a href="https://github.com/abhinav-ranish" target="_blank" rel="noopener noreferrer">
+          Visit my GitHub profile
+        </a>
       <iframe 
         src="https://github-readme-stats.vercel.app/api?username=abhinav-ranish&show_icons=true&theme=dark"
         title="GitHub Repos"
         allowTransparency="true"
       ></iframe>
-      <button 
-        onClick={() => window.open('https://github.com/abhinav-ranish', '_blank')}
-        className="github-button"
-      >
-        Link to my GitHub
-      </button>
+
     </section>
   );
 };

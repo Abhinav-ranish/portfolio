@@ -41,7 +41,17 @@ function App() {
             <GitHubSnippet /> {/* GitHub snippet here */}
           </div>
         </div>
-      </div>
+      </div>  
+      <footer>
+        <div className="footer-content">
+          <p>&copy; 2024 Abhinav Ranish. All rights reserved.</p>
+          <ul className="footer-links">
+            <li><a href="https://github.com/abhinavranish">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/abhinavranish">LinkedIn</a></li>
+            <li><a href="mailto:abhinav@example.com">Email</a></li>
+          </ul>
+        </div>
+      </footer>
     </Router>
   );
 }
