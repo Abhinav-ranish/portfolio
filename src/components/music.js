@@ -1,10 +1,10 @@
-// src/components/GitHubSnippet.js
+// src/components/Music.js
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import './GitHubSnippet.css';
+import './Music.css';
 
-const GitHubSnippet = () => {
+const Music = () => {
   return (
     <motion.section 
       className="github-snippet"
@@ -12,24 +12,24 @@ const GitHubSnippet = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <motion.a 
-        href="https://github.com/abhinav-ranish" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+      <motion.a
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        transition={{ type: 'spring', stiffness: 300 }}
+        transition={{ type: 'spring', stiffness: 300 }}        
+        href="https://music.aranish.codes" 
+        target="_blank" 
+        rel="noopener noreferrer"
       >
-        Github Stats
+        Music Player
+        
       </motion.a>
-
       <motion.iframe
-        src="https://github-readme-stats.vercel.app/api?username=abhinav-ranish&show_icons=true&theme=dark"
-        title="GitHub Repos"
+        src="https://music.aranish.codes/miniplayer"
+        title="MiniPlayer"
         allowTransparency="true"
-        className="github-iframe"
+        className="music-iframe"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}
@@ -38,4 +38,4 @@ const GitHubSnippet = () => {
   );
 };
 
-export default GitHubSnippet;
+export default Music;

@@ -5,18 +5,19 @@
     margin-top: 10px; /* Adjusts spacing around section */
   }
   
-  .github-snippet h2 {
-    margin-bottom: 4px; /* Controls space between heading and link */
-  }
   
-  .github-snippet a {
+.github-snippet a {
+    color: white;
     display: inline-block;
     margin-bottom: 4px; /* Reduces space between link and iframe */
-  }
+    font-family: 'Arial', sans-serif; /* Sets the font family for h2 */
+    font-size: 24px; /* Sets the font size for h2 */
+    font-weight: bold; /* Sets the font weight for h2 */
+}
   
-  .github-iframe {
+  .music-iframe {
     width: 100%; /* Adjusts iframe width */
-    height: 155px; /* Adjusts iframe height */
+    height: 70px; /* Adjusts iframe height */
     border: none;
   }
   

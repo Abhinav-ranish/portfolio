@@ -25,7 +25,7 @@ a:hover {
 /* Navigation bar */
 nav {
   background-color: #1f1f1f;
-  padding: 10px;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,41 +88,10 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Project cards */
-.projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.project-card {
-  background-color: #282828;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  width: 100%;
-  position: relative;
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-.project-card h3 {
-  color: #1db954;
-  margin-bottom: 10px;
-}
-
-.project-card .project-info {
-  display: none;
-  color: #b3b3b3;
-}
 /* Footer styling */
 footer {
   background-color: #1f1f1f;
-  padding: 20px;
+  padding: 10px;
   color: #f4f4f4;
   text-align: center;
   border-top: 1px solid #333;
@@ -159,21 +128,6 @@ footer {
 .project-card:hover .project-info {
   display: block;
   transition: opacity 0.3s ease-in-out;
-}
-
-/* GitHub Repos styling */
-.github-snippet {
-  background-color: #1f1f1f;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  text-align: center;
-}
-
-.github-snippet iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
 }
 
 /* Responsive layout */
