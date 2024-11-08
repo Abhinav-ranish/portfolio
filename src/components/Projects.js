@@ -109,15 +109,6 @@ const Projects = () => (
     animate={{ opacity: 1 }}
     transition={{ duration: 0.5 }}
   >
-    <motion.h2 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      rel='noopener noreferrer'
-      className='motion-h2'
-    >
-      My Projects
-    </motion.h2>
     
     <div className="projects-grid">
       {projects.map((project, index) => (

@@ -1,0 +1,22 @@
+/* src/components/ResumePage.css */
+
+.resume-container {
+    position: flex;
+    padding-top: 70px;
+    width: 100vw;
+    height: 155vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Background color to match theme */
+    overflow: hidden;
+    z-index: 1000; /* Ensures it stays on top */
+  }
+  
+  .resume-viewer {
+    width: 60%;
+    height: 100%;
+    border: none; /* Removes border from the iframe */
+    object-fit: cover; /* Ensures the content fits within the iframe */
+  }
+  
