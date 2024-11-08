@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #121212; /* Background color to match theme */
+    background-color: #42404079; /* Background color to match theme */
     overflow: hidden;
     z-index: 1000; /* Ensures it stays on top */
   }

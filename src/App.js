@@ -1,7 +1,7 @@
 // src/App.js
 
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation, Navigate } from 'react-router-dom';
 import Home from './components/Home';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
@@ -11,6 +11,7 @@ import Music from './components/music';
 import './App.css';
 import ContactPage from './components/ContactPage';
 import ResumePage from './components/ResumePage';
+import Error from './components/Error';
 
 function App() {
   const location = useLocation();
@@ -82,13 +83,21 @@ function App() {
 
         {/* Projects Route */}
         <Route path="/projects" element={<Projects />} />
-
         {/* Resume Route */}
         <Route path="/resume" element={<ResumePage />} />
-
         {/* Contact Route */}
         <Route path="/contact" element={<ContactPage />} />
+
+        {/* Redirects */}
+        <Route path="/spotify" element={<Navigate to="https://spotify.aranish.codes" replace />} />
+        <Route path="/github" element={<Navigate to="https://github.com/abhinav-ranish" replace />} />
+        <Route path="/ASU" element={<Navigate to="https://search.asu.edu/profile/4295566" replace />} />
+
+        {/* Catch-All Route for Undefined Paths */}
+        <Route path="*" element={<Error />} />
+
       </Routes>
+
 
       <footer>
         <div className="footer-content">
