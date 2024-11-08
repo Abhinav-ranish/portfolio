@@ -24,11 +24,24 @@ function App() {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setIsHeaderVisible(false); // Hide on scroll down
+      const isMobile = window.innerWidth <= 768; // Define mobile width threshold
+
+      if (isMobile) {
+        // On mobile, hide on scroll up, show on scroll down
+        if (window.scrollY < lastScrollY) {
+          setIsHeaderVisible(false); // Hide on scroll up
+        } else {
+          setIsHeaderVisible(true); // Show on scroll down
+        }
       } else {
-        setIsHeaderVisible(true); // Show on scroll up
+        // On desktop, hide on scroll down, show on scroll up
+        if (window.scrollY > lastScrollY) {
+          setIsHeaderVisible(false); // Hide on scroll down
+        } else {
+          setIsHeaderVisible(true); // Show on scroll up
+        }
       }
+
       lastScrollY = window.scrollY;
     };
 
