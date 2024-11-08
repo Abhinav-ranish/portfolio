@@ -33,6 +33,8 @@
 @media (max-width: 1000px) {
     #contactpage {
         padding: 20px;
+        padding-top: 100px;
+        padding-bottom: 300px;
     }
   
     .contact-buttons {

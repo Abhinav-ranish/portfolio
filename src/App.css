@@ -34,6 +34,7 @@ nav {
   width: 100%;
   z-index: 1000; /* Ensure it stays on top */
   transition: transform 0.3s ease; /* Smooth hide/show animation */
+
 }
 
 .nav-left ul {
@@ -174,11 +175,11 @@ footer {
   transition: opacity 0.3s ease-in-out;
 }
 
+
 /* Responsive layout */
 @media (max-width: 1000px) {
   .three-column-layout {
     flex-direction: column;
-    padding: 10px;
     padding-top: 100px; 
   }
 
@@ -186,14 +187,29 @@ footer {
     flex-direction: column; 
   }
 
+  /* Adjust navigation bar for mobile view */
+  nav {
+    padding: 10px;
+  }
+
+  /* Center nav-left items */
+  .nav-left {
+    width: 100%; /* Make the container full width */
+
+  }
+
+  .nav-left ul {
+    justify-content: center; /* Center the list items */
+  }
+
+  /* Hide the title in the center */
   .nav-center h1 {
-    font-size: 1.2em;
     display: none;
   }
+
   .music-iframe {
     width: 80%; /* Adjusts iframe width */
     height: 70px; /* Adjusts iframe height */
     border: none;
   }
-
 }

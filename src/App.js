@@ -115,7 +115,7 @@ function App() {
         <div className="footer-content">
           <p>&copy; 2024 Abhinav Ranish. All rights reserved.</p>
           <ul className="footer-links">
-            <li><a href="https://github.com/abhinavranish">GitHub</a></li>
+            <li><a href="https://github.com/abhinav-ranish">GitHub</a></li>
             <li><a href="https://linkedin.com/in/abhinavranish">LinkedIn</a></li>
             <li><a href="mailto:aranish@asu.edu">Email</a></li>
           </ul>
