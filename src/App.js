@@ -74,7 +74,16 @@ function App() {
             </div>
             <div className="middle-column">
               <Resume />
+              <br></br>
               <GitHubSnippet />
+              <div className="button-container">
+                <button 
+                    className="groovy-green-button" 
+                    onClick={() => window.location.href = '/projects'}
+                >
+                    Projects
+                </button>
+             </div>
             </div>
             <div className="right-column">
               <Contact />

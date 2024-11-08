@@ -71,7 +71,41 @@ nav {
   display: flex;
   gap: 20px;
   padding: 20px;
-  padding-top: 80px;
+  padding-top: 95px;
+}
+/* Centering container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensures it spans the full width of the container */
+  margin-top: 20px; /* Optional spacing */
+}
+
+/* Weirdly named green button style */
+.groovy-green-button {
+  background-color: #1db954;
+  color: #ffffff;
+  font-weight: 700;
+  border: 2px solid #1db954;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.groovy-green-button:hover {
+  background-color: #1ed760;
+  border-color: #1ed760;
+  color: #ffffff;
+}
+
+.groovy-green-button:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(29, 185, 84, 0.6);
 }
 
 .left-column,

@@ -56,6 +56,13 @@ const projects = [
     link: 'https://github.com/Abhinav-ranish/Spotify-Haptics',
   },
   {
+    title: 'Internship Website - QFCRA',
+    description: 'Website which I developed during my internship at QFCRA.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://github.com/Abhinav-ranish/Internship-Website',
+    visit: 'https://internship.aranish.codes/',
+  },
+  {
     title: 'Google Search Cleaner',
     description: 'Chrome extension to remove sponsored search results.',
     technologies: ['JavaScript', 'Chrome Extension'],
