@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Resume.css';
+import './CSS/Resume.css';
 
 const Resume = () => {
   return (

@@ -1,7 +1,7 @@
 // src/components/ResumePage.js
 
 import React from 'react';
-import './ResumePage.css';
+import './CSS/ResumePage.css';
 
 const ResumePage = () => {
   return (

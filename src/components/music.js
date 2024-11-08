@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Music.css';
+import './CSS/Music.css';
 
 const Music = () => {
   return (

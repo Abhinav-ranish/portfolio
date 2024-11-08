@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Projects.css';
+import './CSS/Projects.css';
 
 const projects = [
   {

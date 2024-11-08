@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import './GitHubSnippet.css';
+import './CSS/GitHubSnippet.css';
 
 const GitHubSnippet = () => {
   return (

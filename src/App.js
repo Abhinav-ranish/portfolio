@@ -1,7 +1,7 @@
 // src/App.js
 
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
@@ -12,6 +12,9 @@ import './App.css';
 import ContactPage from './components/ContactPage';
 import ResumePage from './components/ResumePage';
 import Error from './components/Error';
+import Spotify from './components/Spotify';
+import GitHub from './components/Github';
+import ASU from './components/Asu';
 
 function App() {
   const location = useLocation();
@@ -89,9 +92,9 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
 
         {/* Redirects */}
-        <Route path="/spotify" element={<Navigate to="https://spotify.aranish.codes" replace />} />
-        <Route path="/github" element={<Navigate to="https://github.com/abhinav-ranish" replace />} />
-        <Route path="/ASU" element={<Navigate to="https://search.asu.edu/profile/4295566" replace />} />
+        <Route path="/spotify" element={<Spotify/>} />
+        <Route path="/github" element={<GitHub />} />
+        <Route path="/ASU" element={<ASU />} />
 
         {/* Catch-All Route for Undefined Paths */}
         <Route path="*" element={<Error />} />

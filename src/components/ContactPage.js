@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import './ContactPage.css';
+import './CSS/ContactPage.css';
 
 const ContactPage = () => {
   return (
