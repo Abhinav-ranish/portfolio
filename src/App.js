@@ -2,13 +2,13 @@
 
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import Home from './components/Home';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
-import Projects from './components/Projects'; // Import Projects component
+import Projects from './components/Projects';
 import GitHubSnippet from './components/Snippet';
 import Music from './components/music';
-import './App.css';
 import ContactPage from './components/ContactPage';
 import ResumePage from './components/ResumePage';
 import Error from './components/Error';
@@ -24,22 +24,12 @@ function App() {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
-      const isMobile = window.innerWidth <= 768; // Define mobile width threshold
+      const isMobile = window.innerWidth <= 768;
 
       if (isMobile) {
-        // On mobile, hide on scroll up, show on scroll down
-        if (window.scrollY < lastScrollY) {
-          setIsHeaderVisible(false); // Hide on scroll up
-        } else {
-          setIsHeaderVisible(true); // Show on scroll down
-        }
+        setIsHeaderVisible(window.scrollY >= lastScrollY);
       } else {
-        // On desktop, hide on scroll down, show on scroll up
-        if (window.scrollY > lastScrollY) {
-          setIsHeaderVisible(false); // Hide on scroll down
-        } else {
-          setIsHeaderVisible(true); // Show on scroll up
-        }
+        setIsHeaderVisible(window.scrollY <= lastScrollY);
       }
 
       lastScrollY = window.scrollY;
@@ -49,88 +39,81 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Determine the heading text based on the current route path
   const getHeadingText = () => {
     switch (location.pathname) {
-      case '/projects':
-        return 'Projects';
-      case '/resume':
-        return 'Resume Viewer';
-      case '/contact':
-        return 'Hire Me!';
-      default:
-        return 'Abhinav Ranish'; // Default heading for Home or any undefined path
+      case '/projects': return 'Projects';
+      case '/resume': return 'Resume Viewer';
+      case '/contact': return 'Hire Me!';
+      default: return 'Abhinav Ranish';
     }
   };
 
   return (
-    <div className="App">
-      <nav style={{ transform: isHeaderVisible ? 'translateY(0)' : 'translateY(-100%)' }}>
-        <div className="nav-left">
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/resume">Resume</Link></li>
-            <li><Link to="/contact">Hire Me</Link></li>
-          </ul>
-        </div>
-        <div className="nav-center">
-          <h1>{getHeadingText()}</h1>
+    <div className="bg-gray-900 text-gray-100 font-sans text-lg min-h-screen">
+      <nav 
+        className={`bg-gray-800 p-5 fixed top-0 w-full z-50 transition-transform duration-300 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
+      >
+        <div className="flex justify-between items-center">
+          <div className="flex space-x-5">
+            <Link to="/" className="text-white font-bold hover:text-green-500">Home</Link>
+            <Link to="/projects" className="text-white font-bold hover:text-green-500">Projects</Link>
+            <Link to="/resume" className="text-white font-bold hover:text-green-500">Resume</Link>
+            <Link to="/contact" className="text-white font-bold hover:text-green-500">Hire Me</Link>
+          </div>
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <h1 className="text-lg font-semibold text-gray-100">{getHeadingText()}</h1>
+          </div>
         </div>
       </nav>
 
       <Routes>
-        {/* Home Route */}
-        <Route path="/" element={<div className="three-column-layout">
-            <div className="left-column">
-              <Home />
-            </div>
-            <div className="middle-column">
-              <Resume />
-              <br></br>
-              <GitHubSnippet />
-              <div className="button-container">
-                <button 
-                    className="groovy-green-button" 
+        <Route 
+          path="/" 
+          element={
+            <div className="flex flex-col md:flex-row gap-3 p-5 pt-24">
+              <div className="bg-gray-800 p-5 rounded-lg shadow-lg flex-1">
+                <Home />
+              </div>
+              <div className="bg-gray-800 p-5 rounded-lg shadow-lg flex-1">
+                <Resume />
+                <br />
+                <GitHubSnippet />
+                <div className="flex justify-center mt-5">
+                  <motion.button 
+                    className="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-400 uppercase tracking-wide"
                     onClick={() => window.location.href = '/projects'}
-                >
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                  >
                     Projects
-                </button>
-             </div>
+                  </motion.button>
+                </div>
+              </div>
+              <div className="bg-gray-800 p-5 rounded-lg shadow-lg flex-1">
+                <Contact />
+                <br />
+                <Music />
+              </div>
             </div>
-            <div className="right-column">
-              <Contact />
-              <br />
-              <Music />
-            </div>
-          </div>}
+          } 
         />
-
-        {/* Projects Route */}
         <Route path="/projects" element={<Projects />} />
-        {/* Resume Route */}
         <Route path="/resume" element={<ResumePage />} />
-        {/* Contact Route */}
         <Route path="/contact" element={<ContactPage />} />
-
-        {/* Redirects */}
-        <Route path="/spotify" element={<Spotify/>} />
+        <Route path="/spotify" element={<Spotify />} />
         <Route path="/github" element={<GitHub />} />
         <Route path="/ASU" element={<ASU />} />
-
-        {/* Catch-All Route for Undefined Paths */}
         <Route path="*" element={<Error />} />
-
       </Routes>
 
-
-      <footer>
-        <div className="footer-content">
-          <p>&copy; 2024 Abhinav Ranish. All rights reserved.</p>
-          <ul className="footer-links">
-            <li><a href="https://github.com/abhinav-ranish">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/abhinavranish">LinkedIn</a></li>
-            <li><a href="mailto:aranish@asu.edu">Email</a></li>
+      <footer className="bg-gray-800 p-4 text-gray-100 text-center border-t border-gray-700 mt-10 rounded-t-lg max-w-6xl mx-auto">
+        <div className="flex justify-between items-center flex-wrap">
+          <p className="m-0">&copy; 2024 Abhinav Ranish. All rights reserved.</p>
+          <ul className="flex space-x-5 m-0 p-0 list-none">
+            <li><a href="https://github.com/abhinav-ranish" className="text-green-500 hover:text-green-400">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/abhinavranish" className="text-green-500 hover:text-green-400">LinkedIn</a></li>
+            <li><a href="mailto:aranish@asu.edu" className="text-green-500 hover:text-green-400">Email</a></li>
           </ul>
         </div>
       </footer>

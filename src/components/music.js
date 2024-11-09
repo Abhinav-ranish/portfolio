@@ -25,6 +25,7 @@ const Music = () => {
         Music Player
         
       </motion.a>
+      <br /> <br />
       <motion.iframe
         src="https://music.aranish.codes/miniplayer"
         title="MiniPlayer"

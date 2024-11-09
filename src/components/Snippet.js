@@ -24,6 +24,8 @@ const GitHubSnippet = () => {
       >
         Github Stats
       </motion.a>
+      <br />
+      <br />
 
       <motion.iframe
         src="https://github-readme-stats.vercel.app/api?username=abhinav-ranish&show_icons=true&theme=dark"
