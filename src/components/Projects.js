@@ -9,18 +9,21 @@ const projects = [
     description: 'JavaFX app for students to connect and collaborate on projects.',
     technologies: ['JavaFX', 'GitHub', 'Java', 'Eclipse', 'H2', 'Database'],    
     link: 'https://github.com/Abhinav-ranish/CampusHive',
+    image: '/projects/CampusHive.png',
   },
   {
     title: 'Auto Class Enroller',
     description: 'ASU Class Scraper and Automated student enrollment using Selenium and Python.',
     technologies: ['Python', 'Selenium', 'Smtplib'],
     link: 'https://github.com/Abhinav-ranish/ASU-ClassEnroller',
+    image: '/projects/AutoClassEnroller.ico',
   },
   {
     title: 'Keylogger',
     description: 'Records keystrokes and sends them to a server.',
     technologies: ['C', 'Curl', 'Windows API'],
     link: 'https://github.com/Abhinav-ranish/keylogger',
+    image: '/projects/Keylogger.jpeg',
   },
   {
     title: 'Spotify Visualizer Website',
@@ -28,6 +31,7 @@ const projects = [
     technologies: ['MongoDB', 'Three.js', 'Spotify API', 'Express.js', 'AWS'],
     link: 'https://github.com/Abhinav-ranish/spotifyvisualizer',
     visit: 'https://spotify.aranish.codes',
+    image: '/projects/Spotifyvisualizer.png',
   },
   {
     title: 'Simple Music Player',
@@ -35,6 +39,7 @@ const projects = [
     technologies: ['HTML', 'CSS', 'JavaScript', 'Cloudflare Pages'],
     link: 'https://github.com/Abhinav-ranish/Music-Player',
     visit: 'https://music.aranish.codes',
+    image: '/projects/MusicPlayer.png',
   },
   {
     title: 'Internship Website - QFCRA',
@@ -42,24 +47,28 @@ const projects = [
     technologies: ['HTML', 'CSS', 'JavaScript', 'Cloudflare Pages'],
     link: 'https://github.com/Abhinav-ranish/Internship-Website',
     visit: 'https://internship.aranish.codes/',
+    image: '/projects/QFCRA.jpeg',
   },
   {
     title: 'Matrix Graph - DSA OOP Project',
     description: 'Graph data structure with matrix representation.',
     technologies: ['C++', 'Data Structures'],
     link: 'https://github.com/Abhinav-ranish/MatrixGraph-DSA',
+    image: '/projects/MatrixGraph.png',
   },
   {
     title: 'Exploiting a Vulnerable Computer',
     description: 'Used SQL injection and Metasploit to exploit a VM.',
     technologies: ['Metasploit', 'SQL Injection'],
     link: 'https://bit.ly/CPT-redteam',
+    image: '/projects/Vulnerable.png',
   },
   {
     title: 'Spotify Haptics Controller',
     description: 'Haptic feedback for Spotify using Swift and Spotify API.',
     technologies: ['Swift', 'Spotify API'],
     link: 'https://github.com/Abhinav-ranish/Spotify-Haptics',
+    image: '/projects/SpotifyHaptics.png',
   },
 
   {
@@ -67,29 +76,40 @@ const projects = [
     description: 'Chrome extension to remove sponsored search results.',
     technologies: ['JavaScript', 'Chrome Extension'],
     link: 'https://github.com/Abhinav-ranish/google-cleaner',
+    image: '/projects/Google.png',
   },
   {
     title: 'Make Canvas Dark Again',
     description: 'Chrome extension to make the Canvas LMS dark.',
     technologies: ['JavaScript', 'Chrome Extension'],
     link: 'https://github.com/Abhinav-ranish/Make-Canvas-Dark-Again',
+    image: '/projects/Canvas.jpg',
   }
 ];
 
 
-const ProjectCard = ({ title, description, technologies, link, visit }) => (
+const ProjectCard = ({ title, description, technologies, link, visit, image }) => (
   <motion.a
     href={link}
     target="_blank"
     rel="noopener noreferrer"
-    className="block w-4/5 md:w-1/3 lg:w-1/4 bg-gray-800 p-5 rounded-lg shadow-md transform  hover:scale-105"
-    whileHover={{ scale: 1.2 }}
+    className="block w-4/5 md:w-1/3 lg:w-1/4 bg-gray-800 p-5 rounded-lg shadow-md transform hover:scale-105"
+    whileHover={{ scale: 1.1 }}
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.3 }}
   >
     <div>
-      <h3 className="text-green-500 text-xl font-semibold mb-3">{title}</h3>
+      <div className="flex items-center mb-4">
+        {image && (
+          <img 
+            src={image} 
+            alt={`${title} preview`} 
+            className="w-16 h-16 object-contain rounded-full mr-4 border border-gray-500 p-1" 
+          />
+        )}
+        <h3 className="text-green-500 text-xl font-semibold">{title}</h3>
+      </div>
       <div className="text-gray-300">
         <p>{description}</p>
         <p className="mt-3">
@@ -109,7 +129,6 @@ const ProjectCard = ({ title, description, technologies, link, visit }) => (
     </div>
   </motion.a>
 );
-
 const Projects = () => (
   <motion.section
     id="projects"

@@ -15,6 +15,7 @@ import Error from './components/Error';
 import Spotify from './components/Spotify';
 import GitHub from './components/Github';
 import ASU from './components/Asu';
+import Login from './components/Login';
 
 function App() {
   const location = useLocation();
@@ -104,6 +105,7 @@ function App() {
         <Route path="/spotify" element={<Spotify />} />
         <Route path="/github" element={<GitHub />} />
         <Route path="/ASU" element={<ASU />} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<Error />} />
       </Routes>
 
