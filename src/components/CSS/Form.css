@@ -1,0 +1,33 @@
+/* Ensure the container takes full height without unnecessary space */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ensure the iframe stays close to the top */
+    min-height: 100vh; /* Full viewport height */
+    padding-top: 70px; /* Adjust to center the iframe */
+    box-sizing: border-box;
+}
+
+/* iFrame styling */
+.form-iframe {
+    width: 900px;
+    height: 1480px;
+    border: none;
+}
+
+footer {
+    margin-top: -10vh; /* Push the footer to the bottom */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .form-container {
+        padding-top: 50px; /* Adjust to center the iframe */
+    }
+
+    .form-iframe {
+        width: 100%; /* Full width for smaller screens */
+        height: 100; /* Adjust dynamically */
+    }
+}

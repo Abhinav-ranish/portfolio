@@ -16,6 +16,9 @@ import Spotify from './components/Spotify';
 import GitHub from './components/Github';
 import ASU from './components/Asu';
 import Login from './components/Login';
+import MusicPage from './components/MusicPage';
+import Linkedin from './components/Linkedin';
+import Forms from './components/Forms';
 
 function App() {
   const location = useLocation();
@@ -25,14 +28,7 @@ function App() {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
-      const isMobile = window.innerWidth <= 768;
-
-      if (isMobile) {
-        setIsHeaderVisible(window.scrollY >= lastScrollY);
-      } else {
-        setIsHeaderVisible(window.scrollY <= lastScrollY);
-      }
-
+      setIsHeaderVisible(window.scrollY <= lastScrollY);
       lastScrollY = window.scrollY;
     };
 
@@ -41,9 +37,14 @@ function App() {
   }, []);
 
   const getHeadingText = () => {
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+      return ''; // Hide the heading on mobile devices
+    }
     switch (location.pathname) {
       case '/projects': return 'Projects';
-      case '/resume': return 'Resume Viewer';
+      case '/resume': return 'Work Experience';
       case '/contact': return 'Hire Me!';
       default: return 'Abhinav Ranish';
     }
@@ -106,6 +107,9 @@ function App() {
         <Route path="/github" element={<GitHub />} />
         <Route path="/ASU" element={<ASU />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/music" element={<MusicPage />} />
+        <Route path="/linkedin" element={<Linkedin />} />
+        <Route path="/forms" element={<Forms />} />
         <Route path="*" element={<Error />} />
       </Routes>
 
