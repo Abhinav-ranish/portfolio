@@ -28,6 +28,6 @@ footer {
 
     .form-iframe {
         width: 100%; /* Full width for smaller screens */
-        height: 100; /* Adjust dynamically */
+        height: 500; /* Adjust dynamically */
     }
 }
