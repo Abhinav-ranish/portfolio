@@ -109,7 +109,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/music" element={<MusicPage />} />
         <Route path="/linkedin" element={<Linkedin />} />
-        <Route path="/forms" element={<Forms />} />
+        <Route path="/form" element={<Forms />} />
         <Route path="*" element={<Error />} />
       </Routes>
 
