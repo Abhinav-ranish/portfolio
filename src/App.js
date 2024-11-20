@@ -114,6 +114,7 @@ function App() {
         <Route path="/music" element={<MusicPage />} />
         <Route path="/linkedin" element={<Linkedin />} />
         <Route path="/form" element={<Forms />} />
+        <Route path="/forms" element={<Forms />} />
         <Route path="*" element={<Error />} />
       </Routes>
 

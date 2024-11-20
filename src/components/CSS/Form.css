@@ -6,6 +6,7 @@
     justify-content: flex-start; /* Ensure the iframe stays close to the top */
     min-height: 100vh; /* Full viewport height */
     padding-top: 70px; /* Adjust to center the iframe */
+    padding-bottom: -500px;
     box-sizing: border-box;
     overflow: hidden; /* Hide any overflow */
 }
@@ -13,7 +14,7 @@
 /* iFrame styling */
 .form-iframe {
     width: 900px;
-    height: 1480px;
+    height: 1450px;
     border: none;
     overflow: hidden;
 }
@@ -31,6 +32,6 @@ footer {
 
     .form-iframe {
         width: 100%; /* Full width for smaller screens */
-        height: 500; /* Adjust dynamically */
+        height: 2000px;
     }
 }
