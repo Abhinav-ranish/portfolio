@@ -52,21 +52,25 @@ function App() {
 
   return (
     <div className="bg-gray-900 text-gray-100 font-sans text-lg min-h-screen">
-      <nav 
-        className={`bg-gray-800 p-5 fixed top-0 w-full z-50 transition-transform duration-300 ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
-      >
-        <div className="flex justify-between items-center">
-          <div className="flex space-x-5">
-            <Link to="/" className="text-white font-bold hover:text-green-500">Home</Link>
-            <Link to="/projects" className="text-white font-bold hover:text-green-500">Projects</Link>
-            <Link to="/resume" className="text-white font-bold hover:text-green-500">Resume</Link>
-            <Link to="/contact" className="text-white font-bold hover:text-green-500">Hire Me</Link>
-          </div>
-          <div className="absolute left-1/2 transform -translate-x-1/2">
-            <h1 className="text-lg font-semibold text-gray-100">{getHeadingText()}</h1>
-          </div>
+     <motion.nav
+      initial={{ y: 0 }}
+      animate={{ y: isHeaderVisible ? 0 : -100 }}
+      transition={{ type: "spring", stiffness: 80, damping: 20, duration: 0.5 }}
+      className="bg-gray-800 p-5 fixed top-0 w-full z-50"
+    >
+      <div className="flex justify-between items-center">
+        <div className="flex space-x-5">
+          <Link to="/" className="text-white font-bold hover:text-green-500">Home</Link>
+          <Link to="/projects" className="text-white font-bold hover:text-green-500">Projects</Link>
+          <Link to="/resume" className="text-white font-bold hover:text-green-500">Resume</Link>
+          <Link to="/contact" className="text-white font-bold hover:text-green-500">Hire Me</Link>
         </div>
-      </nav>
+        <div className="absolute left-1/2 transform -translate-x-1/2">
+          <h1 className="text-lg font-semibold text-gray-100">{getHeadingText()}</h1>
+        </div>
+      </div>
+    </motion.nav>
+
 
       <Routes>
         <Route 
@@ -113,7 +117,7 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
 
-      <footer className="bg-gray-800 p-4 text-gray-100 text-center border-t border-gray-700 mt-10 rounded-t-lg max-w-6xl mx-auto">
+      <footer className="bg-gray-800 p-3 text-gray-100 text-center border-t border-gray-700 mt-5 rounded-t-lg max-w-6xl mx-auto">
         <div className="flex justify-between items-center flex-wrap">
           <p className="m-0">&copy; 2024 Abhinav Ranish. All rights reserved.</p>
           <ul className="flex space-x-5 m-0 p-0 list-none">

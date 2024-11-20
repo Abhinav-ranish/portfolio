@@ -1,12 +1,12 @@
-// src/components/ResumePage.js
-
 import React from 'react';
+import { motion } from 'framer-motion';
+import './CSS/ResumePage.css';
 
 const ResumePage = () => {
   const experiences = [
     {
       title: 'Technology Consultant',
-      organization: 'Arizona State University',
+      organization: 'Enterprise Technology - Arizona State University',
       duration: 'November 2024 - Present',
       description: [
         'Provided in-class tech support, quickly addressing issues with projectors, cameras, mics, and more to minimize class disruptions.',
@@ -14,7 +14,7 @@ const ResumePage = () => {
         'Performed end-of-day checks to confirm tech functionality and classroom security.',
         'Demonstrated adaptability and problem-solving in a fast-paced environment, ensuring a smooth tech experience.',
       ],
-      image: '/work/asu.webp', // Replace with your actual image paths
+      image: '/work/asu.webp',
     },
     {
       title: 'Information Technology Intern',
@@ -26,7 +26,7 @@ const ResumePage = () => {
         'Created presentations on IT Infrastructure with tools like Trellix, Azure, and FortiClient.',
         'Managed sensitive and client data in compliance with company regulations.',
       ],
-      image: '/work/qfcra.jpeg', // Replace with your actual image paths
+      image: '/work/qfcra.jpeg',
     },
     {
       title: 'IT Intern',
@@ -37,34 +37,36 @@ const ResumePage = () => {
         'Gained proficiency in switch configuration, IP addressing, subnetting, and VLAN management.',
         'Applied practical knowledge in computer networking.',
       ],
-      image: '/work/mannai.png', // Replace with your actual image paths
+      image: '/work/mannai.png',
     },
   ];
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 min-h-screen py-12">
-      <div className="max-w-7xl mx-auto px-9 py-20">
-        <div className="relative border-l-2 border-gray-300 dark:border-gray-600">
+    <div className="resume-page">
+      <div className="resume-container">
+        <div className="timeline">
           {experiences.map((exp, index) => (
-            <div key={index} className="mb-10 ml-6">
-              <div className="absolute -left-6 w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
-                <img
-                  src={exp.image}
-                  alt={exp.title}
-                  className="w-10 h-10 rounded-full object-cover"
-                />
+            <motion.div
+              key={index}
+              className="timeline-item"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
+            >
+              <div className="icon">
+                <img src={exp.image} alt={exp.title} className="icon-image" />
               </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100">{exp.title}</h2>
-                <p className="text-gray-600 dark:text-gray-400">{exp.organization}</p>
-                <p className="text-sm text-gray-500 dark:text-gray-500">{exp.duration}</p>
-                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mt-4">
+              <div className="content">
+                <h2 className="title">{exp.title}</h2>
+                <p className="organization">{exp.organization}</p>
+                <p className="duration">{exp.duration}</p>
+                <ul className="description">
                   {exp.description.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
                 </ul>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
