@@ -12,11 +12,11 @@ const projects = [
     image: '/projects/CampusHive.png',
   },
   {
-    title: 'Auto Class Enroller',
-    description: 'ASU Class Scraper and Automated student enrollment using Selenium and Python.',
-    technologies: ['Python', 'Selenium', 'Smtplib'],
-    link: 'https://github.com/Abhinav-ranish/ASU-ClassEnroller',
-    image: '/projects/AutoClassEnroller.ico',
+    title: 'Spotify Wrapped Bot',
+    description: 'Boost your Spotify Wrapped stats effortlessly, intelligent playback scheduling, seamless background operation, and predictive machine learning to optimize your music experience!',
+    technologies: ['Python', 'Scikit', 'Websockets', 'Spotify API', 'Machine Learning', 'Pandas', 'Matplotlib',],
+    link: 'https://github.com/Abhinav-ranish/wrappedbot',
+    image: '/projects/SpotifyWrappedBot.png',
   },
   {
     title: 'Keylogger',
@@ -62,6 +62,13 @@ const projects = [
     technologies: ['Metasploit', 'SQL Injection'],
     link: 'https://bit.ly/CPT-redteam',
     image: '/projects/Vulnerable.png',
+  },
+  {
+    title: 'Auto Class Enroller',
+    description: 'ASU Class Scraper and Automated student enrollment using Selenium and Python.',
+    technologies: ['Python', 'Selenium', 'Smtplib'],
+    link: 'https://github.com/Abhinav-ranish/ASU-ClassEnroller',
+    image: '/projects/AutoClassEnroller.ico',
   },
   {
     title: 'Spotify Haptics Controller',
