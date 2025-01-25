@@ -1,0 +1,45 @@
+/* styles.css */
+  h1, h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  p, ul {
+    line-height: 1.6;
+  }
+  
+  .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, #3b82f6, #9333ea, #ec4899);
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .text-black {
+    color: black;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rounded-2xl {
+    border-radius: 1rem;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .m-4 {
+    margin: 1rem;
+  }
+  
+  .list-disc {
+    list-style-type: disc;
+  }
+  
+  .list-inside {
+    padding-left: 1rem;
+  }
+  

@@ -19,6 +19,7 @@ import Login from './components/Login';
 import MusicPage from './components/MusicPage';
 import Linkedin from './components/Linkedin';
 import Forms from './components/Forms';
+import Availability from './components/Availability';
 
 function App() {
   const location = useLocation();
@@ -116,6 +117,7 @@ function App() {
         <Route path="/form" element={<Forms />} />
         <Route path="/forms" element={<Forms />} />
         <Route path="*" element={<Error />} />
+        <Route path="/availability" element={<Availability />} />
       </Routes>
 
       <footer className="bg-gray-800 p-3 text-gray-100 text-center border-t border-gray-700 mt-5 rounded-t-lg max-w-6xl mx-auto">
