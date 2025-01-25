@@ -5,6 +5,13 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: 'Secure Team Password Manager',
+    description: 'Deployed Passbolt Community Edition on AWS EC2 to streamline password management for ACM ASU.',
+    technologies: ['AWS', 'NGNIX', 'Passbolt', 'OpenSSL', 'Ubuntu', 'EC2'],
+    link: 'https://asu.acm.org/',
+    image: '/projects/passbolt.png',
+  },
+  {
     title: 'Campus Hive',
     description: 'JavaFX app for students to connect and collaborate on projects.',
     technologies: ['JavaFX', 'GitHub', 'Java', 'Eclipse', 'H2', 'Database'],    

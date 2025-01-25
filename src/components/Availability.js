@@ -29,7 +29,7 @@ const cardStyle = "p-4 m-4 rounded-2xl shadow-lg bg-white text-black";
 const Availability = () => {
   return (
     <div className={`min-h-screen ${fancyBackground} flex flex-col items-center justify-center p-4`}>
-      <h1 className="text-4xl font-bold mb-6 drop-shadow-lg">My Weekly Availability</h1>
+      <h1 className="text-4xl font-bold mb-6 drop-shadow-lg">My Weekly Schedule</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl w-full">
         {Object.entries(schedule).map(([day, times]) => (
           <div className={`${cardStyle}`} key={day}>
