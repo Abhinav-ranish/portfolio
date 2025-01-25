@@ -28,7 +28,7 @@ const Resume = () => {
       >
         You can download my resume{' '}
         <motion.a 
-          href="/Resume.pdf" 
+          href="/resume.pdf" 
           download 
           className="text-green-500 hover:text-green-400"
           whileHover={{ scale: 1.1 }}

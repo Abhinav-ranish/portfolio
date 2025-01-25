@@ -63,7 +63,7 @@ function App() {
         <div className="flex space-x-5">
           <Link to="/" className="text-white font-bold hover:text-green-500">Home</Link>
           <Link to="/projects" className="text-white font-bold hover:text-green-500">Projects</Link>
-          <Link to="/resume" className="text-white font-bold hover:text-green-500">Resume</Link>
+          <Link to="/resume" className="text-white font-bold hover:text-green-500">Work Experience</Link>
           <Link to="/contact" className="text-white font-bold hover:text-green-500">Hire Me</Link>
         </div>
         <div className="absolute left-1/2 transform -translate-x-1/2">
