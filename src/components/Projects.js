@@ -5,6 +5,27 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: 'Stock AI Analyzer RAG',
+    description: 'AI-powered stock analysis tool leveraging Retrieval-Augmented Generation (RAG) with FAISS vector search and Ollama LLM.',
+    technologies: ['Python', 'FAISS', 'Ollama', 'Yahoo Finance API', 'React'],
+    link: 'https://github.com/Abhinav-ranish/AI-Stock-Algorithm',
+    image: '/projects/StockAIAnalyzer.jpg',
+  },
+  {
+    title: 'Stock Predictor',
+    description: 'Stock prediction system using Backtesting.py to evaluate trade strategies and forecast stock movements.',
+    technologies: ['Python', 'Backtesting.py', 'Financial Data Analysis'],
+    link: 'https://github.com/Abhinav-ranish/Stock-Predictor',
+    image: '/projects/StockPredictor.jpg',
+  },
+  {
+    title: 'Contract Conditions Extraction and Verification',
+    description: 'Extracts contract conditions from DOCX files and verifies task compliance using NLP and Ollama RAG orchestration.',
+    technologies: ['Python', 'Ollama', 'RAG', 'Streamlit', 'Docx'],
+    link: 'https://en.wikipedia.org/wiki/Non-disclosure_agreement',
+    image: '/projects/ContractAnalyzer.jpeg',
+  },
+  {
     title: 'Secure Team Password Manager',
     description: 'Deployed Passbolt Community Edition on AWS EC2 to streamline password management for ACM ASU.',
     technologies: ['AWS', 'NGNIX', 'Passbolt', 'OpenSSL', 'Ubuntu', 'EC2'],
