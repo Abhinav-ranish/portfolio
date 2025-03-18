@@ -47,31 +47,40 @@ function App() {
       case '/projects': return 'Projects';
       case '/resume': return 'Work Experience';
       case '/contact': return 'Hire Me!';
+      case '/availability' : return 'Availability';
       default: return 'Abhinav Ranish';
     }
   };
 
   return (
-    <div className="bg-gray-900 text-gray-100 font-sans text-lg min-h-screen">
-     <motion.nav
-      initial={{ y: 0 }}
-      animate={{ y: isHeaderVisible ? 0 : -100 }}
-      transition={{ type: "spring", stiffness: 80, damping: 20, duration: 0.5 }}
-      className="bg-gray-800 p-5 fixed top-0 w-full z-50"
-    >
-      <div className="flex justify-between items-center">
-        <div className="flex space-x-5">
-          <Link to="/" className="text-white font-bold hover:text-green-500">Home</Link>
-          <Link to="/projects" className="text-white font-bold hover:text-green-500">Projects</Link>
-          <Link to="/resume" className="text-white font-bold hover:text-green-500">Work Experience</Link>
-          <Link to="/contact" className="text-white font-bold hover:text-green-500">Hire Me</Link>
-        </div>
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <h1 className="text-lg font-semibold text-gray-100">{getHeadingText()}</h1>
-        </div>
+<div className="bg-gray-900 text-gray-100 font-sans text-lg min-h-screen">
+  <motion.nav
+    initial={{ y: 0 }}
+    animate={{ y: isHeaderVisible ? 0 : -100 }}
+    transition={{ type: "spring", stiffness: 80, damping: 20, duration: 0.5 }}
+    className="bg-gray-800 p-5 fixed top-0 w-full z-50"
+  >
+    <div className="flex justify-between items-center">
+      {/* Left Section */}
+      <div className="flex space-x-5">
+        <Link to="/" className="text-white font-bold hover:text-green-500">Home</Link>
+        <Link to="/projects" className="text-white font-bold hover:text-green-500">Projects</Link>
+        <Link to="/resume" className="text-white font-bold hover:text-green-500">Work Experience</Link>
       </div>
-    </motion.nav>
 
+      {/* Centered Title */}
+      <div className="absolute left-1/2 transform -translate-x-1/2">
+        <h1 className="text-lg font-semibold text-gray-100">{getHeadingText()}</h1>
+      </div>
+
+      {/* Right Section */}
+      <div className="flex space-x-5">
+        <Link to="/contact" className="text-white font-bold hover:text-green-500">Hire Me</Link>
+        <Link to="/availability" className="text-white font-bold hover:text-green-500">Availability</Link>
+        <Link to="/asu" className="text-white font-bold hover:text-green-500">ASU</Link>
+      </div>
+    </div>
+  </motion.nav>
 
       <Routes>
         <Route 
