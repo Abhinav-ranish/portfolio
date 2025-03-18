@@ -126,7 +126,7 @@ function App() {
           <ul className="flex space-x-5 m-0 p-0 list-none">
             <li><a href="https://github.com/abhinav-ranish" className="text-green-500 hover:text-green-400">GitHub</a></li>
             <li><a href="https://linkedin.com/in/abhinavranish" className="text-green-500 hover:text-green-400">LinkedIn</a></li>
-            <li><a href="mailto:aranish@asu.edu" className="text-green-500 hover:text-green-400">Email</a></li>
+            <li><a href="mailto:presidentofjoy@asu.edu" className="text-green-500 hover:text-green-400">Email</a></li>
           </ul>
         </div>
       </footer>
