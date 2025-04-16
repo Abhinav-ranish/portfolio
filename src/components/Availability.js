@@ -7,13 +7,12 @@ const schedule = {
     { start: "9:00 AM", end: "11:30 AM" },
     { start: "1:30 PM", end: "4:30 PM" },
   ],
-  Tuesday: [{ start: "10:30 AM", end: "1:30 PM" }],
+  Tuesday: [{ start: "1:30 PM", end: "10:30 PM" }],
   Wednesday: [
-    { start: "9:00 AM", end: "11:30 AM" },
-    { start: "4:30 PM", end: "7:15 PM" },
+    { start: "9:00 AM", end: "12:30 PM" },
   ],
   Thursday: [{ start: "10:30 AM", end: "1:30 PM" }],
-  Friday: "Free",
+  Friday: [{ start: "1:30 PM", end: "7:30 PM" }],
   Saturday: [{ start: "8:30 AM", end: "1:30 PM" }],
   Sunday: "Free",
 };
@@ -102,7 +101,7 @@ const Availability = () => {
                 <ul className="text-lg list-none space-y-2">
                   {times.map((time, idx) => (
                     <li key={idx} className="flex items-center">
-                      <span className="bg-green-500 px-2 py-1 rounded text-sm mr-2">
+                      <span className="bg-red-500 px-2 py-1 rounded text-sm mr-2">
                         ⏰ {time.start} - {time.end}
                       </span>
                     </li>
