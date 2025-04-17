@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     title: 'BetterStreaming',
-    description: 'A media streaming platform that collects content from PirateBay+, enabling seamless streaming of movies and TV shows with WebTorrent support. Built with a React frontend and Next.js, the app offers personalized browsing, advanced search, and progressive streaming via a Rust-based native app.',
+    description: 'A media streaming platform using PirateBay+ for content, featuring a React/Next.js frontend and Rust-based WebTorrent streaming. It offers personalized browsing, advanced search, and progressive streaming.',
     technologies: ['React', 'Next.js', 'WebTorrent', 'Rust', 'Prisma', 'PostgreSQL'],
     link: 'https://github.com/Abhinav-ranish/BetterStreaming',
     image: '/projects/BetterStreaming.png',
