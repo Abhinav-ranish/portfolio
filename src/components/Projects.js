@@ -65,7 +65,7 @@ const projects = [
     description: 'Live website using MongoDB and Three.js for dynamic visual effects.',
     technologies: ['MongoDB', 'Three.js', 'Spotify API', 'Express.js', 'AWS'],
     link: 'https://github.com/Abhinav-ranish/spotifyvisualizer',
-    visit: 'https://spotify.aranish.codes',
+    visit: 'https://spotify.aranish.uk',
     image: '/projects/Spotifyvisualizer.png',
   },
   {
