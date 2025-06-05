@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const MusicPage = () => {
     useEffect(() => {
-        window.location.href = 'https://music.aranish.codes';
+        window.location.href = 'https://music.aranish.uk';
     }, []);
 
     return null;
