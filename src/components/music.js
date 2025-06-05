@@ -18,7 +18,7 @@ const Music = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         transition={{ type: 'spring', stiffness: 300 }}        
-        href="https://music.aranish.codes" 
+        href="https://music.aranish.uk" 
         target="_blank" 
         rel="noopener noreferrer"
       >
@@ -27,7 +27,7 @@ const Music = () => {
       </motion.a>
       <br /> <br />
       <motion.iframe
-        src="https://music.aranish.codes/miniplayer"
+        src="https://music.aranish.uk/miniplayer"
         title="MiniPlayer"
         allowTransparency="true"
         className="music-iframe"
