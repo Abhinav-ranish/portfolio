@@ -53,7 +53,7 @@ function App() {
   };
 
   return (
-<div className="bg-gray-900 text-gray-100 font-sans text-lg min-h-screen">
+<div className="bg-gray-900 text-gray-100 font-sans text-lg min-h-screen pb-24">
   <motion.nav
     initial={{ y: 0 }}
     animate={{ y: isHeaderVisible ? 0 : -100 }}
@@ -108,8 +108,6 @@ function App() {
               </div>
               <div className="bg-gray-800 p-5 rounded-lg shadow-lg flex-1">
                 <Contact />
-                <br />
-                <Music />
               </div>
             </div>
           } 
@@ -139,6 +137,9 @@ function App() {
           </ul>
         </div>
       </footer>
+      <div className="music-fixed">
+        <Music />
+      </div>
     </div>
   );
 }
