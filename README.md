@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Abhinav Ranish — Portfolio (Next.js + TailwindCSS 4)
 
-## Getting Started
+This is my personal portfolio site showcasing my work in Software Engineering, Cybersecurity, AI/ML, and more.  
+Built with the latest tech: **Next.js 15 (App Router)**, **React 19**, **TypeScript**, **TailwindCSS 4**, and deployed via **Cloudflare Pages**.
 
-First, run the development server:
+---
+
+## ⚙️ Tech Stack
+
+- **Frontend Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** TailwindCSS 4
+- **Components:** Framer Motion, Lucide Icons, ShadCN
+- **Hosting:** Cloudflare Pages
+- **Animations:** Framer Motion + CSS transitions
+- **Persistent Music Player:** Embedded iframe + floating control
+- **Projects Filter:** Category tabs + Framer animations
+
+---
+
+## 🚀 Getting Started (Local Setup)
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone repo
+git clone https://github.com/Abhinav-ranish/portfolio.git
+cd portfolio
+
+# Install deps
+npm install  # or yarn / pnpm
+
+# Start dev server
 pnpm dev
-# or
-bun dev
+````
+
+Visit: `http://localhost:3000`
+
+---
+
+## 🛠 Folder Structure
+
+```bash
+app/                  # Next.js 15 App Router layout
+  page.tsx            # Landing page layout
+  contact/page.tsx    # Contact page
+  projects/page.tsx   # Projects display with filters
+components/           # All modular UI components
+  Home.tsx
+  MusicBar.tsx
+  AnimatedTitle.tsx
+  ...
+public/               # Images, favicon, static files
+tailwind.config.ts    # Tailwind v4 config
+postcss.config.js     # Tailwind/PostCSS plugin config
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌩 Deployment: Cloudflare Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔗 GitHub Connected
 
-## Learn More
+* Repo: `Abhinav-ranish/portfolio`
+* Branch: `main`
+* Framework Preset: `Next.js`
+* Build Command: `npm build`
+* Output Directory: `.next`
 
-To learn more about Next.js, take a look at the following resources:
+### 🛠 Environment Variables (if needed)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+None required for public portfolio — static build.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 🔁 Branch Management
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* `main`: latest working TypeScript Next.js version (live)
+* `old-dev`: legacy React + JS version (archived)
+* `feature/*`: optional staging branches for new features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🧼 Styling & Utilities
+
+* **Tailwind 4** (no custom CSS used)
+* `clsx`, `tailwind-merge` for conditional styling
+* Responsive grid layout using `grid-cols-*` utilities
+* `framer-motion` used for all entrance/hover animations
+* Theme: dark UI with green highlights
+
+---
+
+## 🎧 Music Player
+
+```tsx
+// Floating player via iframe
+<iframe
+  src="https://music.aranish.uk/miniplayer"
+  className="rounded-full w-full h-full"
+/>
+```
+
+* Persistent across pages
+* Collapsible behavior for minimal UI
+* Custom domain used: `music.aranish.uk`
+
+---
+
+## 📈 Analytics / Extras
+
+* `VisitCounter.tsx`: Fetches from `/api/visit` (optional)
+* `AnimatedTitle.tsx`: Colorful animated title with Framer Motion
+* Dynamic toolbar for project categories (AI, Cyber, Software, Hot!, All)
+
+---
+
+## 💬 Contact / Calendly
+
+* Contact page has:
+
+  * `Connect on LinkedIn` → [linkedin.com/in/abhinavranish](https://www.linkedin.com/in/abhinavranish/)
+  * `Email Me` → `chatgpt@asu.edu`
+  * `Schedule Meet` → [meet.aranish.uk](https://meet.aranish.uk)
+
+---
+
+## 🛡 License
+
+MIT License © Abhinav Ranish
+
+---
