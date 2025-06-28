@@ -5,12 +5,57 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: 'FaceTagger: Local Smart Photo Tagger',
+    description:
+      'Offline AI tool to detect, embed, and cluster faces in 1TB+ photo libraries. UI built with Streamlit allows users to label clusters, write EXIF/JSON tags, and organize collections without cloud dependency. GPU acceleration via CUDA + InsightFace.',
+    technologies: ['Python', 'InsightFace', 'Streamlit', 'EXIFTool', 'ONNX', 'HDBSCAN'],
+    link: 'https://github.com/Abhinav-ranish/FaceMatch',
+    image: '/projects/facetagger.png',
+    category: 'AI',
+  },
+  {
+    title: 'Net Audit Suite',
+    description:
+      'Cyber audit tool integrating Nmap, Nikto, OpenVAS, and arp-scan to generate AI-powered summaries of discovered vulnerabilities using LLaMA + Ollama. Generates DOCX reports, maps infected IPs, and provides a dark-mode frontend in Next.js.',
+    technologies: ['Next.js', 'Node.js', 'Ollama', 'OpenVAS', 'Nmap', 'Tailwind'],
+    link: 'https://github.com/Abhinav-ranish/Network-Vulnerability-Audit',
+    image: '/projects/netaudit.png',
+    category: 'Cyber',
+  },
+  {
+    title: 'Educational Worm + Dashboard',
+    description:
+      'Python worm POC that replicates across user folders, USBs, and sends host info to a Flask-based C2 dashboard. Dashboard shows infection map, kill switch, and logs. Fully safe for sandbox testing and cyber education.',
+    technologies: ['Python', 'Flask', 'Geocoder', 'USB I/O', 'Self-replication'],
+    link: 'https://github.com/Abhinav-ranish/Worm',
+    image: '/projects/worm.png',
+    category: 'Cyber',
+  },
+  {
+    title: 'DIW387 STB Mod Toolkit',
+    description:
+      'Toolkit to de-bloat and customize Ooredoo’s locked DIW387 Android TV STB. Includes Wolf Launcher setup, splash screen mods, sideload tooling, and Dirty COW (CVE-2016-5195) root attempt. For education and warranty-voiding fun.',
+    technologies: ['Bash', 'Android TV', 'ADB', 'Dirty COW Exploit'],
+    link: 'https://github.com/Abhinav-ranish/ooreedoo-DIW387-mod',
+    image: '/projects/stbmod.png',
+    category: 'Cyber',
+  },
+  {
+    title: 'VibeCode Machine',
+    description:
+      'Experimental AI-assisted code builder that autogenerates, tests, and fixes Python projects via Ollama + Codellama. Automatically patches failed logic and regenerates dependencies via smart retry. CLI interface for rapid prototyping.',
+    technologies: ['Python', 'Ollama', 'LLM Automation', 'Patch Diffing'],
+    link: 'https://github.com/Abhinav-ranish/The-Super-Coder',
+    image: '/projects/vibecode.png',
+    category: 'AI',
+  },
+  {
     title: 'BetterStreaming',
     description: 'A media streaming platform using PirateBay+ for content, featuring a React/Next.js frontend and Rust-based WebTorrent streaming. It offers personalized browsing, advanced search, and progressive streaming.',
     technologies: ['React', 'Next.js', 'WebTorrent', 'Rust', 'Prisma', 'PostgreSQL'],
     link: 'https://github.com/Abhinav-ranish/BetterStreaming',
     image: '/projects/BetterStreaming.png',
-  },  
+  },
   {
     title: 'Stock AI Analyzer RAG',
     description: 'AI-powered stock analysis tool leveraging Retrieval-Augmented Generation (RAG) with FAISS vector search and Ollama LLM.',
@@ -40,9 +85,16 @@ const projects = [
     image: '/projects/passbolt.png',
   },
   {
+    title: 'Cyber Scripts'
+  description: 'Deployed Passbolt Community Edition on AWS EC2 to streamline password management for ACM ASU.',
+    technologies: ['AWS', 'NGNIX', 'Passbolt', 'OpenSSL', 'Ubuntu', 'EC2'],
+    link: 'https://asu.acm.org/',
+    image: '/projects/passbolt.png',
+  }
+  {
     title: 'Campus Hive',
     description: 'JavaFX app for students to connect and collaborate on projects.',
-    technologies: ['JavaFX', 'GitHub', 'Java', 'Eclipse', 'H2', 'Database'],    
+    technologies: ['JavaFX', 'GitHub', 'Java', 'Eclipse', 'H2', 'Database'],
     link: 'https://github.com/Abhinav-ranish/CampusHive',
     image: '/projects/CampusHive.png',
   },
@@ -144,10 +196,10 @@ const ProjectCard = ({ title, description, technologies, link, visit, image }) =
     <div>
       <div className="flex items-center mb-4">
         {image && (
-          <img 
-            src={image} 
-            alt={`${title} preview`} 
-            className="w-16 h-16 object-contain rounded-full mr-4 border border-gray-500 p-1" 
+          <img
+            src={image}
+            alt={`${title} preview`}
+            className="w-16 h-16 object-contain rounded-full mr-4 border border-gray-500 p-1"
           />
         )}
         <h3 className="text-green-500 text-xl font-semibold">{title}</h3>
