@@ -1,7 +1,8 @@
 name = "visitor-counter"
 compatibility_date = "2024-06-27"
 
+pages_build_output_dir = "./.next"
+
 [[kv_namespaces]]
-binding = "VISIT_KV"
-id = "your-production-id"
-preview_id = "your-preview-id"
+binding = "KV_BINDING"
+id = "0b76eada1f41443e82eb2dc60ef7af49"

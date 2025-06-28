@@ -1,8 +1,8 @@
 /// <reference types="@cloudflare/workers-types" />
 export async function onRequest(context: {
-  env: { VISIT_KV: KVNamespace }
+  env: { KV_BINDING: KVNamespace }
 }): Promise<Response> {
-    const kv = context.env.VISIT_KV
+    const kv = context.env.KV_BINDING
   const key = 'total_visits'
 
   const value = await kv.get(key)
