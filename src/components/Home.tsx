@@ -22,7 +22,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Abhinav Ranish
+          Who is Abhinav 
         </motion.h1>
 
         <motion.p
@@ -31,7 +31,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-          I’m a passionate Software Engineer and Cybersecurity enthusiast focusing on SWE, SDE, DevOps, Cloud Engineering, Cybersecurity, and Data Analysis. Currently pursuing a B.S. in Computer Science with a double major in Justice Studies.
+          Abhinav is a passionate Software Engineer and Cybersecurity enthusiast focusing on SWE, SDE, DevOps, Cloud Engineering, Cybersecurity, and Data Analysis. Currently pursuing a B.S. in Computer Science with a double major in Justice Studies.
         </motion.p>
 
         <motion.p
@@ -40,7 +40,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          I enjoy working on projects that allow me to automate tasks, secure systems, and leverage data for better decision-making.
+          He enjoys working on projects that allows him to automate tasks, secure systems, and leverage data for better decision-making.
         </motion.p>
 
         <div className="flex justify-center gap-6 pt-2">

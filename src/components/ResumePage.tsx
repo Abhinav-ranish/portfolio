@@ -93,11 +93,11 @@ export default function ResumePage() {
     return (
         <div className="min-h-screen px-5 pb-10 bg-gray-900 text-gray-100">
             <div className="max-w-4xl mx-auto relative">
-                <div className="absolute left-4 top-0 bottom-0 w-px bg-gray-700" />
+                <div className="md:absolute md:left-4 md:top-0 md:bottom-0 md:w-px md:bg-gray-700" />
                 {experiences.map((e, i) => (
                     <motion.div
                         key={i}
-                        className="mb-12 relative pl-12"
+                        className="mb-12 relative md:pl-12"
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: i * 0.2 }}
