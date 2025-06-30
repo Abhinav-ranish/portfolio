@@ -54,13 +54,13 @@ export default function NavBar() {
       <div className="max-w-8xl mx-auto flex justify-between items-center">
         {/* Left links */}
         <div className="hidden md:flex space-x-5">
-          <Link href="/" className="font-bold hover:text-green-500">
+          <Link href="/" className="font-bold hover:text-pink-300">
             Home
           </Link>
-          <Link href="/projects" className="font-bold hover:text-green-500">
+          <Link href="/projects" className="font-bold hover:text-pink-300">
             Projects
           </Link>
-          <Link href="/experience" className="font-bold hover:text-green-500">
+          <Link href="/experience" className="font-bold hover:text-pink-300">
             Experience
           </Link>
         </div>
@@ -72,10 +72,10 @@ export default function NavBar() {
 
         {/* Right links */}
         <div className="hidden md:flex space-x-5">
-          <Link href="/contact" className="font-bold hover:text-green-500">
+          <Link href="/contact" className="font-bold hover:text-pink-300">
             Connect
           </Link>
-          <Link href="/availability" className="font-bold hover:text-green-500">
+          <Link href="/availability" className="font-bold hover:text-pink-300">
             Availability
           </Link>
         </div>

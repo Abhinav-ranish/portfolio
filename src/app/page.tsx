@@ -48,7 +48,7 @@ export default function HomePage() {
               href="https://github.com/abhinav-ranish"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-green-400 transition-colors"
+              className="hover:text-pink-200 transition-colors"
             >
               GitHub
             </a>
@@ -56,13 +56,13 @@ export default function HomePage() {
               href="https://linkedin.com/in/abhinavranish"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-green-400 transition-colors"
+              className="hover:text-pink-200 transition-colors"
             >
               LinkedIn
             </a>
             <a
               href="mailto:presidentofjoy@asu.edu"
-              className="hover:text-green-400 transition-colors"
+              className="hover:text-pink-200 transition-colors"
             >
               Email
             </a>
