@@ -39,6 +39,7 @@ const projects: Project[] = [
     technologies: ['Python', 'InsightFace', 'Streamlit', 'EXIFTool', 'ONNX', 'HDBSCAN'],
     link: 'https://github.com/Abhinav-ranish/FaceMatch',
     image: '/projects/facetagger.png',
+    workinprogress: true,
     category: ['ML', '🔥🔥'],
   },
   {
@@ -108,6 +109,7 @@ const projects: Project[] = [
     description: 'Stock prediction system using Backtesting.py to evaluate trade strategies and forecast stock movements.',
     technologies: ['Python', 'Backtesting.py', 'Financial Data Analysis'],
     link: 'https://github.com/Abhinav-ranish/Stock-Predictor',
+    workinprogress: true,
     image: '/projects/StockPredictor.jpg',
     category: 'ML',
   },
@@ -272,7 +274,7 @@ export default function Projects() {
             key={cat}
             onClick={() => setFilter(cat)}
             className={`px-4 py-1.5 rounded-full border ${filter === cat
-                ? 'bg-green-500 text-white border-green-600'
+                ? 'bg-red-300 text-white border-red-400'
                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               } transition`}
           >
@@ -292,11 +294,20 @@ export default function Projects() {
             target="_blank"
             rel="noopener noreferrer"
             layout
-            className="group bg-gray-800 p-5 rounded-lg shadow-md hover:scale-110 transition-transform"
+            className="relative group bg-gray-800 p-5 rounded-lg shadow-md hover:scale-110 transition-transform"
             initial={{ opacity: 0.1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: i * 0.05 }}
           >
+
+          {p.workinprogress && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/50 rounded-lg overflow-hidden">
+              <h4 className="w-[110%] py-1 text-center text-sm font-bold text-black bg-yellow-400 -rotate-6 shadow-md">
+                WORK IN PROGRESS
+              </h4>
+            </div>
+          )}
+
             <div className="flex items-center mb-4">
               <Image
                 src={p.image}
@@ -306,7 +317,7 @@ export default function Projects() {
                 className="w-20 h-20 object-cover rounded-full border border-gray-500"
               />
 
-              <h3 className="text-green-500 text-xl font-semibold ml-4">{p.title}</h3>
+              <h3 className="text-red-300 text-xl font-semibold ml-4">{p.title}</h3>
             </div>
             <motion.div
               initial={false}
@@ -326,7 +337,7 @@ export default function Projects() {
                 href={p.visit}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-green-500 text-white mt-4 py-2 rounded text-center font-medium hover:bg-green-600 transition-colors"
+                className="block bg-red-300 text-white mt-4 py-2 rounded text-center font-medium hover:bg-red-400 transition-colors"
               >
                 Live
               </a>

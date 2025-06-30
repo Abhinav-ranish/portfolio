@@ -22,14 +22,14 @@ export default function Contact() {
           href="https://www.linkedin.com/in/abhinavranish/"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
+          className="bg-red-300 text-white py-2 px-4 rounded-lg hover:bg-red-400"
           whileHover={{ scale: 1.1 }}
         >
           Connect on LinkedIn
         </motion.a>
         <motion.a
           href="mailto:aranish@asu.edu"
-          className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
+          className="bg-red-300 text-white py-2 px-4 rounded-lg hover:bg-red-400"
           whileHover={{ scale: 1.1 }}
         >
           Email Me

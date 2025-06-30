@@ -17,7 +17,7 @@ export default function Resume() {
         <a
           href="/resume.pdf"
           download
-          className="text-green-500 hover:text-green-400"
+          className="text-red-300 hover:text-red-200"
         >
           here
         </a>.

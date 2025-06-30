@@ -48,7 +48,7 @@ export default function Home() {
             href="https://github.com/abhinav-ranish"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-500 hover:text-green-400 font-medium"
+            className="text-red-300 hover:text-red-200 font-medium"
             whileHover={{ scale: 1.1 }}
             transition={{ type: 'spring', stiffness: 300 }}
           >
@@ -58,7 +58,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/abhinavranish/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-500 hover:text-green-400 font-medium"
+            className="text-red-300 hover:text-red-200 font-medium"
             whileHover={{ scale: 1.1 }}
             transition={{ type: 'spring', stiffness: 300 }}
           >

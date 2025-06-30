@@ -25,14 +25,14 @@ export default function ContactPage() {
           href="https://www.linkedin.com/in/abhinavranish/"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+          className="bg-red-400 text-white py-2 px-4 rounded hover:bg-red-300"
           whileHover={{ scale: 1.1 }}
         >
           Connect on LinkedIn
         </motion.a>
         <motion.a
           href="mailto:aranish@asu.edu"
-          className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+          className="bg-red-400 text-white py-2 px-4 rounded hover:bg-red-300"
           whileHover={{ scale: 1.1 }}
         >
           Email Me
@@ -41,7 +41,7 @@ export default function ContactPage() {
           href="https://meet.aranish.uk"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+          className="bg-red-400 text-white py-2 px-4 rounded hover:bg-red-300"
           whileHover={{ scale: 1.1 }}
         >
           Book a Call

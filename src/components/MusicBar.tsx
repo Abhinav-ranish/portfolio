@@ -27,7 +27,7 @@ export default function MusicBar() {
 
       {/* Icon always on top */}
       {!hovered && (
-        <div className="absolute left-3 w-10 h-10 flex items-center justify-center text-green-400 pointer-events-none">
+        <div className="absolute left-3 w-10 h-10 flex items-center justify-center text-red-300 pointer-events-none">
           <Music2 className="w-6 h-6" />
         </div>
       )}
