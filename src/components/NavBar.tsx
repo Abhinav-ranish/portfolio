@@ -104,6 +104,7 @@ export default function NavBar() {
               <Link href="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
               <Link href="/experience" onClick={() => setMenuOpen(false)}>Experience</Link>
               <Link href="/contact" onClick={() => setMenuOpen(false)}>Connect</Link>
+              <Link href="/qa" onClick={() => setMenuOpen(false)}>Mr Robot</Link>
             </div>
           </motion.div>
         )}
