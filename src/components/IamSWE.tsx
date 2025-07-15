@@ -9,7 +9,8 @@ const titles = [
   'A . I .',
   'Machine Learning',
   'Scripting',
-  'Full Stack',
+  'UI / UX',
+  'Frontend',
   'Engineer',
 ]
 

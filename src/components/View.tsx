@@ -15,7 +15,7 @@ export default function VisitCounter() {
     }, [])
 
     return (
-        <div className="mt-6 flex items-center justify-center gap-2 text-sm text-gray-300">
+            <div className="flex flex-col md:flex-row justify-center space-y-1 md:space-y-0 md:space-x-1">
             <motion.span
                 className="inline-flex items-center justify-center bg-black w-6 h-6 bg text-white text-xs rounded-full shadow-md animate-pulse"
                 initial={{ scale: 0.5, opacity: 0 }}
@@ -26,7 +26,7 @@ export default function VisitCounter() {
             </motion.span>
 
             <AnimatePresence mode="wait">
-                <motion.span
+                <motion.a
                     className="ml-1"
                     key={count}
                     initial={{ opacity: 0, y: 6 }}
@@ -35,8 +35,9 @@ export default function VisitCounter() {
                     transition={{ duration: 0.4 }}
                 >
                     {count === null ? 'Loading visits...' : `Counter: ${count.toLocaleString()} `}
-                </motion.span>
+                </motion.a>
             </AnimatePresence>
         </div>
     )
 }
+// This component fetches the visit count from the server and displays it with a nice animation.

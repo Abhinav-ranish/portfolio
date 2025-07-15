@@ -40,7 +40,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          He enjoys working on projects that allows him to automate tasks, secure systems, and leverage data for better decision-making.
+          I enjoy working on projects that allows me to automate tasks, secure systems, and leverage data for better decision-making.
         </motion.p>
 
         <div className="flex justify-center gap-6 pt-2">

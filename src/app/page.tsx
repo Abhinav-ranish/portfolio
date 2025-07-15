@@ -12,29 +12,33 @@ export default function HomePage() {
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
         <section className="bg-gray-800 p-5 rounded-lg shadow-lg flex-1">
-          <Resume />
-          <div className="mt-5 py-8">
-            <AnimatedTitle />
-          </div>
-          <div className="mt-5 py-1">
-            <MiniProject />
-          </div>
-          <div className="mt-5 py-2">
-            <VisitCounter />
-          </div>
-        </section>
-        <section className="bg-gray-800 p-5 rounded-lg shadow-lg flex-1">
           <Home />
         </section>
         <section className="bg-gray-800 p-5 rounded-lg shadow-lg flex-1">
-          <Contact />
-          <div className="mt-5">
+          <div className="mt-9 py-3 flex items-center justify-center">
+            <AnimatedTitle />
+          </div>
+          <div className="mt-8 ">
             <GitHubSnippet />
           </div>
+          <div className="mt-6 py-6 flex items-center space-x-15 justify-center">
+            <MiniProject />
+
+            <VisitCounter />
+          </div>
+
+        </section>
+        <section className="bg-gray-800 p-5 rounded-lg shadow-lg flex-1">
+          
+                      <Resume />
+
+          <div className="mt-5">
+          </div>
+          <Contact />
         </section>
       </div>
 
-      
+
     </>
   )
 }
