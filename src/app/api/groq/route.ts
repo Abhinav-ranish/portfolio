@@ -1,5 +1,6 @@
 // app/api/groq/route.ts
 import { NextRequest, NextResponse } from 'next/server'
+import { isRateLimited } from '@/lib/rateLimiter'
 import Groq from 'groq-sdk'
 
 
@@ -14,6 +15,11 @@ const groq = new Groq({
 
 export async function POST(request: NextRequest) {
     try {
+        const ip = request.headers.get('x-forwarded-for') || 'unknown'
+
+        if (isRateLimited(ip)) {
+            return NextResponse.json({ error: 'Too many requests. Slow down.' }, { status: 429 })
+        }
         const { question, context } = await request.json()
 
         if (!question || typeof question !== 'string') {
