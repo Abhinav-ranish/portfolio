@@ -135,9 +135,9 @@ const work: Option[] = [
     {
         label: 'Cyber Intern @ Ampcus Cyber',
         context: `
-      Conducted web application penetration tests using Burp Suite, focusing on SQLi, XSS, and auth flaws.
-      Collaborated on simulated red team exercises and improved practical offensive/defensive security skills.
-      Practiced Hack The Box + OWASP Web Security Guide to deepen web exploit expertise.
+    Performed security assessments of web applications using tools like Burp Suite, identifying potential issues such as input handling and authentication weaknesses.
+    Worked collaboratively on simulated security scenarios to strengthen both offensive and defensive cybersecurity techniques.
+    Continuously developed hands-on web security skills through platforms like Hack The Box and the OWASP Web Security Testing Guide.
     `.trim(),
     },
     {
@@ -221,12 +221,12 @@ export default function ChatPage() {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(messages))
     }, [messages])
 
-    // // auto-scroll only if there are 4 or more messages
-    // useEffect(() => {
-    //     if (messages.length >= 4) {
-    //         chatEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-    //     }
-    // }, [messages])
+    // auto-scroll only if there are 4 or more messages
+    useEffect(() => {
+        if (messages.length >= 4) {
+            chatEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+        }
+    }, [messages])
 
 
     // spam throttle
@@ -331,7 +331,7 @@ export default function ChatPage() {
     ]
 
     return (
-        <div className="h-screen max-w-2xl mx-auto flex flex-col">
+        <div className=" max-w-2xl mx-auto flex flex-col">
 
             {/* Suggestions bar */}
             <div className="flex overflow-x-auto space-x-2 p-2">
