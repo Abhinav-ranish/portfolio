@@ -43,6 +43,15 @@ const projects: Project[] = [
     category: ['ML', '🔥🔥'],
   },
   {
+    title: 'Stock AI Analyzer RAG',
+    description: 'AI-powered stock analysis tool leveraging Retrieval-Augmented Generation (RAG) with FAISS vector search and Ollama LLM.',
+    technologies: ['Python', 'FAISS', 'Ollama', 'Yahoo Finance API', 'React'],
+    link: 'https://github.com/Abhinav-ranish/AI-Stock-Algorithm',
+    visit: 'https://stock.aranish.uk',
+    image: '/projects/StockAIAnalyzer.jpg',
+    category: ['AI/LLM', '🔥🔥', 'Websites'],
+  },
+  {
     title: 'Cyber Scripts',
     description:
       'A collection of offensive security automation scripts created during PortSwigger, JWT, and CTF training. Includes Turbo Intruder templates, LLM prompt injections, JWT brute-force, exploit server hijacking, and more. Built to speed up recon and exploitation in web targets.',
@@ -95,14 +104,6 @@ const projects: Project[] = [
     link: 'https://github.com/Abhinav-ranish/BetterStreaming',
     image: '/projects/BetterStreaming.png',
     category: ['Software', '🔥🔥'],
-  },
-  {
-    title: 'Stock AI Analyzer RAG',
-    description: 'AI-powered stock analysis tool leveraging Retrieval-Augmented Generation (RAG) with FAISS vector search and Ollama LLM.',
-    technologies: ['Python', 'FAISS', 'Ollama', 'Yahoo Finance API', 'React'],
-    link: 'https://github.com/Abhinav-ranish/AI-Stock-Algorithm',
-    image: '/projects/StockAIAnalyzer.jpg',
-    category: ['AI/LLM', '🔥🔥'],
   },
   {
     title: 'Stock Predictor',
