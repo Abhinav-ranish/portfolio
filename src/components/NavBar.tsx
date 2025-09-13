@@ -124,7 +124,7 @@ export default function NavBar() {
               <Link
                 href="/old"
                 scroll={false}
-                className="ml-4 px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-pink-300 transition text-sm font-medium flex items-center gap-2 text-white"
+                className="ml-2 px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-pink-300 transition text-sm font-medium flex items-center gap-2 text-white"
               >
                 <Moon size={18} />
                 Old UI
