@@ -32,3 +32,7 @@ html, body {
 .animate-bounce-fade {
   animation: bounceFade 1s ease-out forwards;
 }
+
+.text-pink-400 {
+  word-break: break-word;
+}

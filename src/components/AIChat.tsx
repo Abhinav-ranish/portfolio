@@ -265,7 +265,17 @@ export function AIChat() {
                   : "bg-gray-700 text-gray-100 rounded-bl-none"
               }`}
             >
-              {m.text}
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: 
+                  m.text.replace(/\*\*(.*?)\*\*/g, "<strong class='font-bold'>$1</strong>")
+                  .replace(
+                    /(https?:\/\/[^\s]+)/g,
+                    `<a href="$1" target="_blank" rel="noopener noreferrer" class="text-pink-400 underline hover:text-pink-300">$1</a>`
+                  ),
+                  
+                }}
+              />
             </div>
           </div>
         ))}
