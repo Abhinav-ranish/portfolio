@@ -76,20 +76,24 @@ export default function NavBar() {
             />
           </Link>
           {isOldUI ? (
-            <button
-              className="font-semibold font-medium text-gray-900"
-              onClick={() => (window.location.href = "/old")}
-              aria-label="Go to Old UI"
-              style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+            <Link
+              href="/old"
+              scroll={false}
+              className="font-semibold font-medium text-gray-900 cursor-pointer"
             >
               {getHeading()}
-            </button>
+            </Link>
           ) : (
             <button
               className="font-semibold font-medium text-gray-900"
               onClick={() => scrollToId("hero")}
               aria-label="Scroll to Hero"
-              style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+              style={{
+                background: "none",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+              }}
             >
               {getHeading()}
             </button>
@@ -117,29 +121,14 @@ export default function NavBar() {
               >
                 Connect
               </button>
-              <button
-                onClick={() => {
-                  if (isOldUI) {
-                    window.location.href = "/";
-                  } else {
-                    window.location.href = "/old";
-                  }
-                }}
+              <Link
+                href="/old"
+                scroll={false}
                 className="ml-4 px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-pink-300 transition text-sm font-medium flex items-center gap-2 text-white"
-                aria-label="Toggle Old UI"
               >
-                {isOldUI ? (
-                  <>
-                    <Sun size={18} />
-                    New UI
-                  </>
-                ) : (
-                  <>
-                    <Moon size={18} />
-                    Old UI
-                  </>
-                )}
-              </button>
+                <Moon size={18} />
+                Old UI
+              </Link>
             </>
           )}
 
@@ -147,36 +136,42 @@ export default function NavBar() {
             <>
               <Link
                 href="/old/projects"
+                scroll={false}
                 className="font-medium text-gray-900 hover:text-pink-400"
               >
                 Projects
               </Link>
               <Link
                 href="/old/experience"
+                scroll={false}
                 className="font-medium text-gray-900 hover:text-pink-400"
               >
                 Work Experience
               </Link>
               <Link
                 href="/old/contact"
+                scroll={false}
                 className="font-medium text-gray-900 hover:text-pink-400"
               >
                 Connect
               </Link>
               <Link
                 href="/old/qa"
+                scroll={false}
                 className="font-medium text-gray-900 hover:text-pink-400"
               >
                 Mr Robot
               </Link>
-              <button
-                onClick={() => (window.location.href = "/")}
+
+              {/* Back to New UI Button */}
+              <Link
+                href="/"
+                scroll={false}
                 className="ml-4 px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-pink-300 transition text-sm font-medium flex items-center gap-2 text-white"
-                aria-label="Back to New UI"
               >
                 <Sun size={18} />
                 New UI
-              </button>
+              </Link>
             </>
           )}
         </div>
