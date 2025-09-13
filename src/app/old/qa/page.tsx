@@ -333,7 +333,7 @@ export default function ChatPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-2xl mx-auto flex flex-col bg-gray-900 rounded-2xl shadow-lg w-full h-[70vh]">
+      <div className="max-w-2xl mt-20 mx-auto flex flex-col bg-gray-900 rounded-2xl shadow-lg w-full h-[80vh]">
         {/* Suggestions bar */}
         <div className="flex overflow-x-auto space-x-2 p-2">
           {suggestions.map((s, i) => {

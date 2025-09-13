@@ -75,28 +75,29 @@ export function AIChat() {
   const chatBoxRef = useRef<HTMLDivElement>(null);
   const hydrated = useRef(false);
 
-  // load history (runs once)
+  const GREETING =
+    "Hi, I’m Mr. Robot (Abhi's Assistant). How can I help you today?";
+
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
+
     if (saved) {
       try {
-        setMessages(JSON.parse(saved));
+        const parsed = JSON.parse(saved) as Message[] | unknown;
+
+        // Guard against bad or empty histories
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setMessages(parsed);
+        } else {
+          setMessages([{ sender: "ai", text: GREETING }]);
+        }
       } catch {
-        setMessages([
-          {
-            sender: "ai",
-            text: "Hi, I’m Mr. Robot (Abhi's Assistant). How can I help you today?",
-          },
-        ]);
+        setMessages([{ sender: "ai", text: GREETING }]);
       }
     } else {
-      setMessages([
-        {
-          sender: "ai",
-          text: "Hi, I’m Mr. Robot (Abhi's Assistant). How can I help you today?",
-        },
-      ]);
+      setMessages([{ sender: "ai", text: GREETING }]);
     }
+
     hydrated.current = true;
   }, []);
 
@@ -288,6 +289,7 @@ export function AIChat() {
         {showProjectOptions &&
           projOptions.map((o, i) => (
             <button
+              type="button"
               key={`proj-${i}`}
               onClick={() => {
                 sendMessage(`Tell me more about ${o.label}`, o.context);
@@ -303,6 +305,7 @@ export function AIChat() {
         {showWorkOptions &&
           expOptions.map((o, i) => (
             <button
+              type="button"
               key={`work-${i}`}
               onClick={() => {
                 sendMessage(`Tell me more about ${o.label}`, o.context);
@@ -330,7 +333,10 @@ export function AIChat() {
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
               e.preventDefault();
-              handleSubmit(e as any);
+              if (input.trim()) {
+                sendMessage(input);
+                setInput("");
+              }
             }
           }}
           className="flex-1 p-2 rounded-lg bg-neutral-800 text-gray-100 border border-neutral-700 resize-none h-[42px]"
