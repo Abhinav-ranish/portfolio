@@ -6,7 +6,7 @@ export default function ContactPage() {
     <motion.section
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="text-center bg-gray-900 max-w-2xl mx-auto rounded-lg pt-36 pb-40 px-5 space-y-10 "
+      className="text-center bg-neutral-950 max-w-2xl mx-auto rounded-lg pt-10 pb-20 px-5 space-y-10 "
     >
       <motion.p
         className="text-gray-300 text-lg md:text-xl"

@@ -1,0 +1,63 @@
+[
+    {
+        "title": "SWE / Cyber Intern",
+        "organization": "Ampcus Inc",
+        "duration": "Jun 2025 - Aug 2025",
+        "description": [
+            "Conducted web application penetration tests using tools like Burp Suite, focusing on vulnerabilities such as SQL injection, XSS, and broken authentication.",
+            "Collaborated with fellow interns on simulations to improve practical offensive and defensive security skills, while advancing skills through Hack The Box and the OWASP Web Security Guide.",
+            "Developed and presented an AI-powered stock analyzer (Vibecoded) using real-time data pipelines and ML insights, delivering results directly to the board.",
+            "Designed and implemented advanced UI features: dynamic dropdowns, enhanced datatables, and filtering using ShadCN, TanStack, and React, integrating REST APIs for improved UX.",
+            "Managed both roles in parallel, demonstrating initiative, versatility, and strong time management."
+        ],
+        "image": "/work/ampcuscyber.jpeg"
+    },
+    {
+        "title": "AI / SWE Intern",
+        "organization": "TRANZYD",
+        "duration": "Dec 2024 - May 2025",
+        "image": "/work/tranzyd.jpg",
+        "description": [
+            "Joined to support AI contract automation; quickly took on core feature development responsibilities.",
+            "Built clause extraction, blueprint generation, and semantic comparison modules using sentence-transformers and Ollama.",
+            "Integrated backend logic using Python, SQLite, and python-docx for contract storage and document generation.",
+            "Designed clause-matching workflows for OLD/NEW comparisons with checkbox-driven contract generation UI.",
+            "Prototyped an AI stock analyzer using RAG pipelines, FAISS, and sentiment models to explore LLM-based tools."
+        ]
+    },
+    {
+        "title": "Technology Consultant",
+        "organization": "Enterprise Technology - Arizona State University",
+        "duration": "November 2024 - Present",
+        "description": [
+            "Provided in-class tech support, quickly addressing issues with projectors, cameras, mics, and more to minimize class disruptions.",
+            "Managed front desk, assisting faculty and staff with real-time inquiries via phone, Slack, and in-person.",
+            "Performed end-of-day checks to confirm tech functionality and classroom security.",
+            "Demonstrated adaptability and problem-solving in a fast-paced environment, ensuring a smooth tech experience."
+        ],
+        "image": "/work/asu.webp"
+    },
+    {
+        "title": "Information Technology Intern",
+        "organization": "Qatar Financial Center Regulatory Authority",
+        "duration": "May 2024 - July 2024",
+        "description": [
+            "Configured clients' work environments to meet corporate requirements.",
+            "Deployed over 150+ laptops with Standard Operating Environment, setting records for deployment speed.",
+            "Created presentations on IT Infrastructure with tools like Trellix, Azure, and FortiClient.",
+            "Managed sensitive and client data in compliance with company regulations."
+        ],
+        "image": "/work/qfcra.jpeg"
+    },
+    {
+        "title": "IT Intern",
+        "organization": "Mannai Corporation",
+        "duration": "July 2023 - August 2023",
+        "description": [
+            "Contributed to the development of an ASP.NET website.",
+            "Gained proficiency in switch configuration, IP addressing, subnetting, and VLAN management.",
+            "Applied practical knowledge in computer networking."
+        ],
+        "image": "/work/mannai.png"
+    }
+]

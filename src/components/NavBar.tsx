@@ -1,18 +1,24 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import Image from 'next/image';
-import { Menu, X, Sun, Moon } from 'lucide-react';
-import { useTheme } from 'next-themes';
-
+"use client";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes";
 
 export default function NavBar() {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [isVisible, setIsVisible] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const isOldUI = pathname.startsWith("/old");
+
+  const scrollToId = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
 
   // useEffect(() => {
   //   let lastY = window.scrollY;
@@ -25,14 +31,18 @@ export default function NavBar() {
   // }, []);
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(theme === "dark" ? "light" : "dark");
   };
   const getHeading = () => {
     switch (pathname) {
-      case '/projects': return 'Personal Projects';
-      case '/contact': return "Send Fan Mail";
-      case '/experience': return 'Experience';
-      default: return 'Abhinav Ranish';
+      case "/projects":
+        return "Personal Projects";
+      case "/contact":
+        return "Send Fan Mail";
+      case "/experience":
+        return "Experience";
+      default:
+        return "Abhinav Ranish";
     }
   };
 
@@ -42,9 +52,9 @@ export default function NavBar() {
       initial={{ y: 0, borderRadius: 999 }}
       animate={{
         y: isVisible ? 0 : -100,
-        borderRadius: menuOpen ? 30 : 900,        // 12px when open, pill when closed
+        borderRadius: menuOpen ? 30 : 900, // 12px when open, pill when closed
       }}
-      transition={{ type: 'spring', stiffness: 80, damping: 20 }}
+      transition={{ type: "spring", stiffness: 80, damping: 20 }}
       className="
         fixed top-4 left-1/2 -translate-x-1/2
         md:w-[60%] w-[80%] max-w-7xl
@@ -57,18 +67,118 @@ export default function NavBar() {
       <div className="hidden md:flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Link href="/">
-            <Image src="/favicon.ico" alt="logo" width={32} height={32} className="rounded-full" />
+            <Image
+              src="/favicon.ico"
+              alt="logo"
+              width={32}
+              height={32}
+              className="rounded-full"
+            />
           </Link>
-          <h1 className="font-semibold font-medium text-gray-900">
-            {getHeading()}
-          </h1>
+          {isOldUI ? (
+            <button
+              className="font-semibold font-medium text-gray-900"
+              onClick={() => (window.location.href = "/old")}
+              aria-label="Go to Old UI"
+              style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+            >
+              {getHeading()}
+            </button>
+          ) : (
+            <button
+              className="font-semibold font-medium text-gray-900"
+              onClick={() => scrollToId("hero")}
+              aria-label="Scroll to Hero"
+              style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+            >
+              {getHeading()}
+            </button>
+          )}
         </div>
-        <div className="flex space-x-6">
-          <Link href="/projects" className="font-medium text-gray-900 hover:text-pink-400">Projects</Link>
-          <Link href="/experience" className="font-medium text-gray-900 hover:text-pink-400">Work Experience</Link>
-          <Link href="/contact" className="font-medium text-gray-900 hover:text-pink-400">Connect</Link>
-          <Link href="/qa" className="font-medium text-gray-900 hover:text-pink-400">Mr Robot</Link>
+        <div className="flex space-x-6 items-center">
+          {!isOldUI && (
+            <>
+              <button
+                onClick={() => scrollToId("experience")}
+                className="font-medium text-gray-900 hover:text-pink-400"
+              >
+                Work Experience
+              </button>
+              <button
+                onClick={() => scrollToId("projects")}
+                className="font-medium text-gray-900 hover:text-pink-400"
+              >
+                Projects
+              </button>
 
+              <button
+                onClick={() => scrollToId("contact")}
+                className="font-medium text-gray-900 hover:text-pink-400"
+              >
+                Connect
+              </button>
+              <button
+                onClick={() => {
+                  if (isOldUI) {
+                    window.location.href = "/";
+                  } else {
+                    window.location.href = "/old";
+                  }
+                }}
+                className="ml-4 px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-pink-300 transition text-sm font-medium flex items-center gap-2 text-white"
+                aria-label="Toggle Old UI"
+              >
+                {isOldUI ? (
+                  <>
+                    <Sun size={18} />
+                    New UI
+                  </>
+                ) : (
+                  <>
+                    <Moon size={18} />
+                    Old UI
+                  </>
+                )}
+              </button>
+            </>
+          )}
+
+          {isOldUI && (
+            <>
+              <Link
+                href="/old/projects"
+                className="font-medium text-gray-900 hover:text-pink-400"
+              >
+                Projects
+              </Link>
+              <Link
+                href="/old/experience"
+                className="font-medium text-gray-900 hover:text-pink-400"
+              >
+                Work Experience
+              </Link>
+              <Link
+                href="/old/contact"
+                className="font-medium text-gray-900 hover:text-pink-400"
+              >
+                Connect
+              </Link>
+              <Link
+                href="/old/qa"
+                className="font-medium text-gray-900 hover:text-pink-400"
+              >
+                Mr Robot
+              </Link>
+              <button
+                onClick={() => (window.location.href = "/")}
+                className="ml-4 px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-pink-300 transition text-sm font-medium flex items-center gap-2 text-white"
+                aria-label="Back to New UI"
+              >
+                <Sun size={18} />
+                New UI
+              </button>
+            </>
+          )}
         </div>
       </div>
 
@@ -86,7 +196,6 @@ export default function NavBar() {
         >
           {menuOpen ? <X /> : <Menu />}
         </button>
-
       </div>
 
       {/* Mobile menu */}
@@ -94,17 +203,27 @@ export default function NavBar() {
         {menuOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
+            animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.5 }}
             className="md:hidden mt-4 overflow-hidden"
           >
             <div className="flex flex-col items-center space-y-4 py-4 text-gray-900">
-              <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
-              <Link href="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-              <Link href="/experience" onClick={() => setMenuOpen(false)}>Experience</Link>
-              <Link href="/contact" onClick={() => setMenuOpen(false)}>Connect</Link>
-              <Link href="/qa" onClick={() => setMenuOpen(false)}>Mr Robot</Link>
+              <Link href="/" onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
+              <Link href="/projects" onClick={() => setMenuOpen(false)}>
+                Projects
+              </Link>
+              <Link href="/experience" onClick={() => setMenuOpen(false)}>
+                Experience
+              </Link>
+              <Link href="/contact" onClick={() => setMenuOpen(false)}>
+                Connect
+              </Link>
+              <Link href="/qa" onClick={() => setMenuOpen(false)}>
+                Mr Robot
+              </Link>
             </div>
           </motion.div>
         )}

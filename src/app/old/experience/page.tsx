@@ -1,5 +1,5 @@
 // app/resume/page.tsx
-import ResumePage from '@/components/ResumePage'
+import ResumePage from '@/components/unused/ResumePage'
 
 export default function ResumeRoute() {
   return (

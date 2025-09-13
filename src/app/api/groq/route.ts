@@ -38,6 +38,7 @@ export async function POST(request: NextRequest) {
   He is also an advocate for cybersecurity best practices
   and has contributed to projects in the AI/ML space.
   Hobbies include playing pickleball, basketball, hacking, and exploring new technologies.
+  Never say "I don't know" just use the contexts provided to you to answer the questions.
   Instagram: @abhinav.ranish linkedin: https://www.linkedin.com/in/abhinavranish/   
   GitHub: @abhinav-ranish
 `.trim()

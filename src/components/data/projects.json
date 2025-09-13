@@ -1,0 +1,205 @@
+[
+
+    {
+        "title": "Stock AI Analyzer",
+        "description": "AI-powered stock analysis tool leveraging multiple data sources such as Google Trends, News API, and yfinance. It aggregates real-time market signals, sentiment, and price data to deliver actionable insights through a sleek frontend powered by AI.",
+        "technologies": ["Python", "Ollama", "Google Trends API", "News API", "yfinance", "React"],
+        "visit": "https://github.com/Abhinav-ranish/AI-Stock-Algorithm",
+        "web": "https://stock.aranish.uk",
+        "image": "/projects/StockAIAnalyzer.jpg",
+        "category": ["AI/LLM", "🔥🔥", "Frontend"]
+},
+        {
+        "title": "FaceTagger: Local Smart Photo Tagger",
+        "description": "Offline AI tool to detect, embed, and cluster faces in 1TB+ photo libraries. UI built with Streamlit allows users to label clusters, write EXIF/JSON tags, and organize collections without cloud dependency. GPU acceleration via CUDA + InsightFace.",
+        "technologies": ["Python", "InsightFace", "Streamlit", "EXIFTool", "ONNX", "HDBSCAN"],
+        "visit": "https://github.com/Abhinav-ranish/FaceMatch",
+        "image": "/projects/facetagger.png",
+        "workinprogress": true,
+        "category": ["ML", "🔥🔥"]
+    },
+        {
+        "title": "BetterStreaming",
+        "description": "A media streaming platform using PirateBay+ for content, featuring a React/Next.js frontend and Rust-based WebTorrent streaming. It offers personalized browsing, advanced search, and progressive streaming.",
+        "technologies": ["React", "Next.js", "WebTorrent", "Rust", "Prisma", "PostgreSQL"],
+        "visit": "https://github.com/Abhinav-ranish/BetterStreaming",
+        "image": "/projects/BetterStreaming.png",
+        "category": ["Software", "🔥🔥"]
+    },
+    {
+        "title": "Cyber Scripts",
+        "description": "A collection of offensive security automation scripts created during PortSwigger, JWT, and CTF training. Includes Turbo Intruder templates, LLM prompt injections, JWT brute-force, exploit server hijacking, and more. Built to speed up recon and exploitation in web targets.",
+        "technologies": ["Python", "Turbo Intruder", "Burp Suite", "LLM", "Bash"],
+        "visit": "https://github.com/Abhinav-ranish/cyberscripts",
+        "image": "/projects/cyberscripts.png",
+        "category": ["Cyber", "Automation"]
+    },
+    {
+        "title": "Net Audit Suite",
+        "description": "Cyber audit tool integrating Nmap, Nikto, OpenVAS, and arp-scan to generate AI-powered summaries of discovered vulnerabilities using LLaMA + Ollama. Generates DOCX reports, maps infected IPs, and provides a dark-mode frontend in Next.js.",
+        "technologies": ["Next.js", "Node.js", "Ollama", "OpenVAS", "Nmap", "Tailwind"],
+        "visit": "https://github.com/Abhinav-ranish/Network-Vulnerability-Audit",
+        "image": "/projects/netaudit.png",
+        "category": ["Cyber", "🔥🔥"]
+    },
+        {
+            "title": "Auto Class Enroller",
+            "description": "Class Scraper and Automated student enrollment tool built with Selenium and Python. It continuously polls course availability, automatically fills in enrollment forms, and registers you as soon as a seat opens. Designed to save students hours of manual checking and ensure faster access to high-demand classes.",
+            "technologies": ["Python", "Selenium", "Smtplib", "ASU", "Automation"],
+            "visit": "https://github.com/Abhinav-ranish/ASU-ClassEnroller",
+            "image": "/projects/AutoClassEnroller.ico",
+            "category": ["Software", "Automation", "🔥🔥"]
+        },
+    {
+        "title": "Educational Worm + Dashboard",
+        "description": "Python worm POC that replicates across user folders, USBs, and sends host info to a Flask-based C2 dashboard. Dashboard shows infection map, kill switch, and logs. Fully safe for sandbox testing and cyber education.",
+        "technologies": ["Python", "Flask", "Geocoder", "USB I/O", "Self-replication"],
+        "visit": "https://github.com/Abhinav-ranish/Worm",
+        "image": "/projects/worm.jpg",
+        "category": "Cyber"
+    },
+    {
+        "title": "DIW387 STB Mod Toolkit",
+        "description": "Toolkit to de-bloat and customize Ooredoo’s locked DIW387 Android TV STB. Includes Wolf Launcher setup, splash screen mods, sideload tooling, and Dirty COW (CVE-2016-5195) root attempt. For education and warranty-voiding fun.",
+        "technologies": ["Bash", "Android TV", "ADB", "Dirty COW Exploit"],
+        "visit": "https://github.com/Abhinav-ranish/ooreedoo-DIW387-mod",
+        "image": "/projects/stbmod.png",
+        "category": ["Cyber", "🔥🔥"]
+    },
+    {
+        "title": "VibeCode Machine",
+        "description": "Experimental AI-assisted code builder that autogenerates, tests, and fixes Python projects via Ollama + Codellama. Automatically patches failed logic and regenerates dependencies via smart retry. CLI interface for rapid prototyping.",
+        "technologies": ["Python", "Ollama", "LLM Automation", "Patch Diffing"],
+        "visit": "https://github.com/Abhinav-ranish/The-Super-Coder",
+        "image": "/projects/vibecode.webp",
+        "category": ["AI/LLM", "🔥🔥"]
+    },
+
+    {
+        "title": "Stock Predictor",
+        "description": "Stock prediction system using Backtesting.py to evaluate trade strategies and forecast stock movements.",
+        "technologies": ["Python", "Backtesting.py", "Financial Data Analysis"],
+        "visit": "https://github.com/Abhinav-ranish/Stock-Predictor",
+        "workinprogress": true,
+        "image": "/projects/StockPredictor.jpg",
+        "category": "ML"
+    },
+    {
+        "title": "Contract Generator RAG",
+        "description": "Extracts contract conditions from DOCX files, generates blueprints from uploaded contracts, and creates new contracts from blueprints. Builds a searchable vector database for advanced queries, using NLP and Ollama RAG orchestration.",
+        "technologies": ["Python", "Ollama", "RAG", "Streamlit", "Docx"],
+        "visit": "https://en.wikipedia.org/wiki/Non-disclosure_agreement",
+        "image": "/projects/ContractAnalyzer.jpeg",
+        "category": ["AI/LLM", "🔥🔥"]
+    },
+    {
+        "title": "Secure Team Password Manager",
+        "description": "Deployed Passbolt Community Edition on AWS EC2 to streamline password management for ACM ASU.",
+        "technologies": ["AWS", "NGNIX", "Passbolt", "OpenSSL", "Ubuntu", "EC2"],
+        "visit": "https://asu-acm.org/",
+        "image": "/projects/passbolt.png",
+        "category": "Cyber"
+    },
+    {
+        "title": "Campus Hive",
+        "description": "Java platform for students to create accounts, verify via email, and collaborate on projects. Includes real-time messaging to contact professors, separate teacher and student dashboards, and an admin panel for inviting, deleting, and managing users.",
+        "technologies": ["Java", "JavaFX", "Jakarta Mail", "GitHub", "Eclipse", "H2 Database"],
+        "visit": "https://github.com/Abhinav-ranish/CampusHive",
+        "image": "/projects/CampusHive.png",
+        "category": ["Software", "🔥🔥"]
+    },
+    {
+        "title": "Spotify Wrapped Bot",
+        "description": "Boost your Spotify Wrapped stats effortlessly, intelligent playback scheduling, seamless background operation, and predictive machine learning to optimize your music experience!",
+        "technologies": ["Python", "Scikit", "Websockets", "Spotify API", "Machine Learning", "Pandas", "Matplotlib"],
+        "visit": "https://github.com/Abhinav-ranish/wrappedbot",
+        "image": "/projects/SpotifyWrappedBot.png",
+        "category": ["ML"]
+    },
+    {
+        "title": "Keylogger",
+        "description": "Records keystrokes and sends them to a server.",
+        "technologies": ["C", "Curl", "Windows API"],
+        "visit": "https://github.com/Abhinav-ranish/keylogger",
+        "image": "/projects/Keylogger.jpeg",
+        "category": ["Cyber"]
+    },
+    {
+        "title": "Personal Portfolio",
+        "description": "Personal portfolio built with Next.js, Tailwind CSS, and Framer Motion. Features categorized project showcase, animated UI, and persistent audio player across routes.",
+        "technologies": ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
+        "visit": "https://github.com/Abhinav-ranish/portfolio",
+        "web": "https://aranish.uk",
+        "image": "/projects/portfolio.ico",
+        "category": ["Frontend"]
+    },
+    {
+        "title": "Spotify Visualizer Website",
+        "description": "Live website using MongoDB and Three.js for dynamic visual effects.",
+        "technologies": ["MongoDB", "Three.js", "Spotify API", "Express.js", "AWS"],
+        "visit": "https://github.com/Abhinav-ranish/spotifyvisualizer",
+        "web": "https://spotify.aranish.uk",
+        "image": "/projects/Spotifyvisualizer.png",
+        "category": ["Frontend"]
+    },
+    {
+        "title": "Simple Music Player",
+        "description": "Music player with play, pause, and skip functionality.",
+        "technologies": ["HTML", "CSS", "JavaScript", "Cloudflare Pages"],
+        "visit": "https://github.com/Abhinav-ranish/Music-Player",
+        "web": "https://music.aranish.uk",
+        "image": "/projects/MusicPlayer.png",
+        "category": ["Frontend"]
+    },
+    {
+        "title": "Internship Website - QFCRA",
+        "description": "Website which I developed during my internship at QFCRA.",
+        "technologies": ["HTML", "CSS", "JavaScript", "Cloudflare Pages"],
+        "visit": "https://github.com/Abhinav-ranish/Internship-Website",
+        "web": "https://internship.aranish.uk/",
+        "image": "/projects/QFCRA.jpeg",
+        "category": ["Frontend"]
+    },
+    {
+        "title": "Matrix Graph - DSA OOP Project",
+        "description": "Graph data structure with matrix representation.",
+        "technologies": ["C++", "Data Structures"],
+        "visit": "https://github.com/Abhinav-ranish/MatrixGraph-DSA",
+        "image": "/projects/MatrixGraph.png",
+        "category": ["Software", "DSA"]
+    },
+    {
+        "title": "Exploiting a Vulnerable Computer",
+        "description": "Used SQL injection and Metasploit to exploit a VM.",
+        "technologies": ["Metasploit", "SQL Injection"],
+        "visit": "https://bit.ly/CPT-redteam",
+        "image": "/projects/Vulnerable.png",
+        "category": ["Cyber"]
+    },
+
+    {
+        "title": "Spotify Haptics Controller",
+        "description": "Haptic feedback for Spotify using Swift and Spotify API.",
+        "technologies": ["Swift", "Spotify API"],
+        "workinprogress": true,
+        "visit": "https://github.com/Abhinav-ranish/Spotify-Haptics",
+        "image": "/projects/SpotifyHaptics.png",
+        "category": ["Software", "IOS"]
+    },
+    {
+        "title": "Google Search Cleaner",
+        "description": "Chrome extension to remove sponsored search results.",
+        "technologies": ["JavaScript", "Chrome Extension"],
+        "visit": "https://github.com/Abhinav-ranish/google-cleaner",
+        "image": "/projects/Google.png",
+        "category": ["Extensions"]
+    },
+    {
+        "title": "Make Canvas Dark Again",
+        "description": "Chrome extension to make the Canvas LMS dark.",
+        "technologies": ["JavaScript", "Chrome Extension"],
+        "visit": "https://github.com/Abhinav-ranish/Make-Canvas-Dark-Again",
+        "image": "/projects/Canvas.jpg",
+        "category": ["Extensions"]
+    }
+]
