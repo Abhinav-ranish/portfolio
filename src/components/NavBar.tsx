@@ -121,14 +121,14 @@ export default function NavBar() {
               >
                 Connect
               </button>
-              <Link
+              {/* <Link
                 href="/old"
                 scroll={false}
                 className="ml-2 px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-pink-300 transition text-sm font-medium flex items-center gap-2 text-white"
               >
                 <Moon size={18} />
                 Old UI
-              </Link>
+              </Link> */}
             </>
           )}
 
@@ -204,19 +204,19 @@ export default function NavBar() {
             className="md:hidden mt-4 overflow-hidden"
           >
             <div className="flex flex-col items-center space-y-4 py-4 text-gray-900">
-              <Link href="/" onClick={() => setMenuOpen(false)}>
+              <Link href="/old" onClick={() => setMenuOpen(false)}>
                 Home
               </Link>
-              <Link href="/projects" onClick={() => setMenuOpen(false)}>
+              <Link href="/old/projects" onClick={() => setMenuOpen(false)}>
                 Projects
               </Link>
-              <Link href="/experience" onClick={() => setMenuOpen(false)}>
+              <Link href="/old/experience" onClick={() => setMenuOpen(false)}>
                 Experience
               </Link>
-              <Link href="/contact" onClick={() => setMenuOpen(false)}>
+              <Link href="/old/contact" onClick={() => setMenuOpen(false)}>
                 Connect
               </Link>
-              <Link href="/qa" onClick={() => setMenuOpen(false)}>
+              <Link href="/old/qa" onClick={() => setMenuOpen(false)}>
                 Mr Robot
               </Link>
             </div>

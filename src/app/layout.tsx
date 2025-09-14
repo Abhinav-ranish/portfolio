@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full scrollbar-hide">
       <body className="flex min-h-screen flex-col bg-neutral-950 text-gray-100 font-sans">
         {/* Top navigation */}
         <NavBar />

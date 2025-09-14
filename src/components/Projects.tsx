@@ -73,7 +73,7 @@ export default function Projects() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="w-full min-h-screen flex items-center justify-center snap-start bg-neutral-950 px-4"
+      className="w-full min-h-screen flex flex-col items-center justify-center snap-start bg-neutral-950 px-4"
     >
       {/* Toolbar */}
       <div className="w-full max-w-7xl relative">
@@ -102,11 +102,13 @@ export default function Projects() {
             </button>
           ))}
         </div>
+      </div>
 
-        {/* Horizontal Scroll Container */}
+      {/* Horizontal Scroll Container */}
+      <div className="relative w-full">
         <div
           ref={containerRef}
-          className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory"
+          className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory px-8"
         >
           {visibleProjects.map((p: any, i: number) => (
             <motion.a
@@ -171,7 +173,7 @@ export default function Projects() {
             </motion.a>
           ))}
         </div>
-              {/* Left Arrow */}
+        {/* Left Arrow */}
         {canScrollLeft && (
           <button
             onClick={() => scrollBy(-700)}
@@ -192,6 +194,5 @@ export default function Projects() {
         )}
       </div>
     </motion.section>
-    
   );
 }

@@ -26,7 +26,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-neutral-950 text-neutral-100">
+    <main className="h-screen w-full overflow-y-scroll snap-y snap-proximity scroll-smooth bg-neutral-950 text-neutral-100 scrollbar-hide">
       {/* Mobile popup */}
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/70 backdrop-blur-sm">
@@ -69,7 +69,6 @@ export default function HomePage() {
           >
             <Experience />
           </section>
-          
 
           {/* Spotlight Projects */}
           <section id="projects" className="h-screen w-full snap-start">
